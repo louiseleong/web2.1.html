@@ -613,9 +613,8 @@
     .prog-track { height:5px; border-radius:3px; background:var(--grey-100); overflow:hidden; }
     .prog-fill { height:100%; border-radius:3px; }
 
-    /* Pricing */}
-    .pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; align-items:stretch; }
-    /* Mobile override for pricing */
+    /* Pricing */
+    .pricing-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; align-items:stretch; }
     @media (max-width:780px) { .pricing-grid { grid-template-columns:1fr; max-width:400px; margin:0 auto; } }
     .plan-card {border-radius:var(--r-xl); border:1.5px solid var(--grey-100); padding:30px; background:var(--white); display:flex; flex-direction:column; position:relative; cursor:pointer; transition:border-color 0.2s, box-shadow 0.2s; }
     .plan-card.featured { border-color:var(--blue); box-shadow:0 0 0 4px var(--blue-glow); }
@@ -2445,96 +2444,105 @@
 
 <section class="section section-alt" style="padding-top:48px;">
   <div class="container">
-    <div class="promo-strip">
-      <p>✓ <strong>14-day free trial</strong> on all plans — no credit card required. Paid plans include a 7-day money-back guarantee.</p>
+    
+    <!-- Top Limited-Time Promo Banner -->
+    <div class="promo-strip" style="background: rgba(29, 99, 180, 0.08); border: 1px solid var(--blue); padding: 12px 20px; border-radius: var(--r-md); text-align: center; margin-bottom: 32px;">
+      <p style="margin: 0; font-size: 14px; color: var(--ink);">
+        🔥 <strong>Launch Special:</strong> Get <strong>40% OFF</strong> your first 6 months on any paid plan. Includes a 14-day free trial.
+      </p>
     </div>
-    <div class="-grid">
+
+    <!-- 4-Column Pricing Grid -->
+    <div class="pricing-grid">
+      <!-- 1. DISCOVERY CARD -->
+      <div class="plan-card reveal">
+        <div class="plan-name">Discover</div>
+        <div class="plan-desc">For individual marketers exploring ad intelligence</div>
+        <div class="plan-price">$0<sub>/mo</sub></div>
+        <div style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--grey-600);background:var(--grey-100);padding:4px 10px;border-radius:var(--r-full);margin-bottom:16px;">Free Forever</div>
+        <div class="plan-period">Month-to-month · No credit card required</div>
+        <ul class="plan-features">
+          <li><strong>1</strong> connected ad account ($200k/mo spend cap)</li>
+          <li><strong>3</strong> brands tracked (Watchlist)</li>
+          <li><strong>1</strong> brand profile & user seat</li>
+          <li><strong>20</strong> AI actions / month</li>
+          <li>3 months performance lookback</li>
+          <li>On-demand creative & performance analysis</li>
+        </ul>
+        <a href="https://app.maradar.ai/signup" onclick="openAuthModal('ob-signup');return false;" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:auto;">Get started free →</a>
+      </div>
+      <!-- 2. STARTER CARD -->
       <div class="plan-card reveal">
         <div class="plan-name">Starter</div>
-        <div class="plan-desc">1 brand · For solo marketers and early-stage brands</div>
+        <div class="plan-desc">For lean teams &amp; early-stage brands</div>
         <div class="plan-price">$159<sub>/mo</sub></div>
         <div style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--green);background:var(--green-tint);padding:4px 10px;border-radius:var(--r-full);margin-bottom:16px;">✓ 14-day free trial</div>
-        <div class="plan-period">Billed monthly · Save 20% annually</div>
+        <div class="plan-period">Month-to-month · 40% OFF launch promo</div>
         <ul class="plan-features">
-          <li>1 brand monitored</li>
-          <li>1 user seat</li>
-          <li>2 markets monitored</li>
-          <li>3 competitor brands tracked</li>
-          <li>500 credits/mo</li>
+          <li><strong>5</strong> connected ad accounts ($500k/mo spend cap)</li>
+          <li><strong>35</strong> brands tracked (Watchlist)</li>
+          <li><strong>3</strong> brand profiles &amp; <strong>5</strong> user seats</li>
+          <li><strong>500</strong> AI actions / month</li>
+          <li>3 months lookback · Monthly AI report insights</li>
           <li>Creative + performance intelligence</li>
-          <li>No lock-in · Cancel anytime</li>
         </ul>
-        <div class="plan-addons">
-          <div class="plan-addons-label">Add-on packs</div>
-          <div class="plan-addons-pills">
-            <span class="plan-addon-pill">Commerce Pack · $20/mo</span>
-          </div>
-        </div>
-        <a href="https://app.maradar.ai/signup" onclick="openAuthModal('ob-signup');return false;" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:20px;">Get started →</a>
+        <a href="https://app.maradar.ai/signup" onclick="openAuthModal('ob-signup');return false;" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:auto;">Start 14-day trial →</a>
       </div>
+      <!-- 3. GROWTH CARD (FEATURED) -->
       <div class="plan-card featured reveal">
         <div class="plan-badge">Most Popular</div>
-        <div class="plan-name">Pro</div>
-        <div class="plan-desc">Up to 3 brands · For growing teams managing multiple markets</div>
-        <div class="plan-price">$399<sub>/mo</sub></div>
+        <div class="plan-name">Growth</div>
+        <div class="plan-desc">For growing brands managing multiple markets</div>
+        <div class="plan-price">$459<sub>/mo</sub></div>
         <div style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--green);background:var(--green-tint);padding:4px 10px;border-radius:var(--r-full);margin-bottom:16px;">✓ 14-day free trial</div>
-        <div class="plan-period">Billed monthly · Save 20% annually</div>
+        <div class="plan-period">Month-to-month · 40% OFF launch promo</div>
         <ul class="plan-features">
-          <li>Up to 3 brands monitored</li>
-          <li>3 user seats</li>
-          <li>5 markets monitored</li>
-          <li>8 competitor brands tracked</li>
-          <li>2,000 credits/mo</li>
-          <li>All Starter intelligence modules</li>
-          <li>Commerce intelligence (TikTok Shop + Amazon)</li>
-          <li>Priority support</li>
+          <li><strong>15</strong> connected ad accounts ($1M/mo spend cap)</li>
+          <li><strong>80</strong> brands tracked (Automatic analysis)</li>
+          <li><strong>5</strong> brand profiles &amp; <strong>8</strong> user seats</li>
+          <li><strong>1,500</strong> AI actions / month</li>
+          <li>6 months lookback · Weekly &amp; Monthly AI reports</li>
+          <li>Tracked brands cross-market comparison</li>
         </ul>
-        <div class="plan-addons">
-          <div class="plan-addons-label">Add-on packs</div>
-          <div class="plan-addons-pills">
-            <span class="plan-addon-pill">Commerce Pack · $20/mo</span>
-          </div>
-        </div>
-        <a href="https://app.maradar.ai/signup" onclick="openAuthModal('ob-signup');return false;" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:20px;">Get started →</a>
+        <a href="https://app.maradar.ai/signup" onclick="openAuthModal('ob-signup');return false;" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:auto;">Start 14-day trial →</a>
       </div>
+      <!-- 4. SCALE CARD -->
       <div class="plan-card reveal">
-        <div class="plan-name">Platinum</div>
-        <div class="plan-desc">Up to 7 brands · For enterprise marketing teams and agencies</div>
-        <div class="plan-price">$799<sub>/mo</sub></div>
+        <div class="plan-name">Scale</div>
+        <div class="plan-desc">For high-volume advertisers &amp; agency portfolios</div>
+        <div class="plan-price">$959<sub>/mo</sub></div>
         <div style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--green);background:var(--green-tint);padding:4px 10px;border-radius:var(--r-full);margin-bottom:16px;">✓ 14-day free trial</div>
-        <div class="plan-period">Billed monthly · Save 20% annually</div>
+        <div class="plan-period">Month-to-month · 40% OFF launch promo</div>
         <ul class="plan-features">
-          <li>Up to 7 brands monitored</li>
-          <li>8 user seats</li>
-          <li>Unlimited markets monitored</li>
-          <li>25 competitor brands tracked</li>
-          <li>5,000 credits/mo</li>
-          <li>All Pro intelligence modules</li>
-          <li>Dedicated onboarding</li>
+          <li><strong>30</strong> connected ad accounts ($2M/mo spend cap)</li>
+          <li><strong>150</strong> brands tracked (Automatic analysis)</li>
+          <li><strong>8</strong> brand profiles &amp; <strong>15</strong> user seats</li>
+          <li><strong>3,000</strong> AI actions / month</li>
+          <li>12 months + QoQ/YoY lookback · Anytime AI reports</li>
+          <li>Tracked brands cross-market comparison</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:20px;">Get started →</a>
+        <a href="https://app.maradar.ai/signup" onclick="openAuthModal('ob-signup');return false;" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:auto;">Start 14-day trial →</a>
       </div>
     </div>
-    <p style="text-align:center;font-size:13px;color:var(--grey-400);margin-top:20px;"><em>Credits are used for Ask Maradar queries, brief generation, and deep analysis. Unused credits don't roll over.</em></p>
-    <!-- Enterprise card -->
-    <div class="enterprise-card reveal">
+    <p style="text-align:center;font-size:13px;color:var(--grey-400);margin-top:24px;">
+      <em>Extra user seats available at $15/seat. AI actions are used for Ask Maradar queries, deep creative analysis, and brief generation.</em>
+    </p>
+    <!-- Generic Low-Commitment Enterprise Banner -->
+    <div class="enterprise-card reveal" style="margin-top:32px;">
       <div class="enterprise-left">
         <h3>Enterprise</h3>
-        <p>Custom  · Built around your scale</p>
+        <p>Custom solutions tailored for large-scale operations and agency groups.</p>
       </div>
       <div class="enterprise-features">
-        <div class="enterprise-feat">Custom brands &amp; markets</div>
-        <div class="enterprise-feat">Unlimited user seats</div>
-        <div class="enterprise-feat">White-label options</div>
-        <div class="enterprise-feat">Dedicated SLA support</div>
-        <div class="enterprise-feat">Custom integrations</div>
-        <div class="enterprise-feat">Priority onboarding</div>
+        <div class="enterprise-feat">Custom ad account limits</div>
+        <div class="enterprise-feat">Flexible seat allocations</div>
+        <div class="enterprise-feat">Custom integrations &amp; SLAs</div>
       </div>
-      <a href="mailto:admin@maradar.ai?subject=Demo%20Request%20via%20Maradar.ai" class="btn btn-white" style="flex-shrink:0;">Contact us →</a>
+      <a href="mailto:admin@maradar.ai?subject=Enterprise%20Inquiry%20via%20Maradar.ai" class="btn btn-white" style="flex-shrink:0;">Talk to us →</a>
     </div>
   </div>
 </section>
-
+  
 <section class="section">
   <div class="container">
     <div class="section-header" style="margin-bottom:40px;">
