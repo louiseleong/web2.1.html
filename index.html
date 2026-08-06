@@ -613,46 +613,51 @@
     .prog-track { height:5px; border-radius:3px; background:var(--grey-100); overflow:hidden; }
     .prog-fill { height:100%; border-radius:3px; }
 
-    /* ──  ── */
+    /* ── Pricing ── */
     
-/* ── Pricing ── */
-
-/* Launch Offer Banner */.promo-strip {background: #f0f7ff; border: 1px solid #cce3ff; padding: 12px 20px; border-radius: 8px; text-align: center; margin-bottom: 32px; }
-.promo-strip p {margin: 0; font-size: 14px; color: #0f172a;}
+/* Launch Offer Banner */
+.promo-strip {background: #f0f7ff; border: 1px solid #cce3ff; padding: 12px 20px; border-radius: 8px; text-align: center; margin-bottom: 32px; }
+.promo-strip p {margin: 0; font-size: 14px; color: #0f172a; }
 /* 4-Column Grid (Desktop) */
-.pricing-grid {display: grid;grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: stretch; width: 100%;}
-.plan-card {border-radius: var(--r-xl, 16px); border: 1.5px solid var(--grey-100, #e2e8f0); padding: 28px 20px; background: var(--white, #ffffff); display: flex; flex-direction: column; position: relative;}
-.plan-card.featured {border-color: var(--blue, #1d63b4); box-shadow: 0 0 0 4px var(--blue-glow, rgba(29, 99, 180, 0.15));}
-.plan-badge-top {position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--blue, #1d63b4); color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; padding: 4px 14px; border-radius: 50px; white-space: nowrap;}
-.plan-header {margin-bottom: 16px;}
-.plan-name {font-size: 20px; font-weight: 700; color: var(--ink, #0f172a); margin-bottom: 6px;}
-.plan-desc {font-size: 12.5px; color: var(--grey-400, #64748b); min-height: 36px; line-height: 1.4; margin-bottom: 14px;}
-.plan-price {font-size: 36px; font-weight: 700; color: var(--ink, #0f172a); letter-spacing: -0.03em; line-height: 1; margin-bottom: 10px;}
-.plan-price sub {font-size: 14px; font-weight: 500; color: var(--grey-400, #64748b);}
-/* Inline Badges (Trial & 40% Promo) */
-.plan-badge-inline {display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 50px; margin-bottom: 6px;}
-.badge-trial {color: #00875a; background: #e6f8f2;}
+.pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: stretch; width: 100%; }
+.plan-card {border-radius: var(--r-xl, 16px); border: 1.5px solid var(--grey-100, #e2e8f0); padding: 28px 20px; background: var(--white, #ffffff);  display: flex; flex-direction: column; position: relative; }
+.plan-card.featured { border-color: var(--blue, #1d63b4); box-shadow: 0 0 0 4px var(--blue-glow, rgba(29, 99, 180, 0.15));}
+.plan-badge-top {position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--blue, #1d63b4); color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; padding: 4px 14px; border-radius: 50px; white-space: nowrap; }
+.plan-header {margin-bottom: 16px; }
+.plan-name {font-size: 20px; font-weight: 700; color: var(--ink, #0f172a); margin-bottom: 6px; }
+.plan-desc {font-size: 12.5px; color: var(--grey-400, #64748b); min-height: 36px; line-height: 1.4; margin-bottom: 14px; }
+.plan-price {font-size: 36px; font-weight: 700; color: var(--ink, #0f172a); letter-spacing: -0.03em; line-height: 1; margin-bottom: 10px; }
+.plan-price sub {font-size: 14px; font-weight: 500; color: var(--grey-400, #64748b); }
+/* Inline Badges (40% Early Bird Promo) */
+.plan-badge-inline {display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 50px; margin-bottom: 6px; }
+.badge-trial {color: #00875a; background: #e6f8f2; }
 .badge-promo {color: #1d63b4; background: #edf5ff;}
-.plan-period {font-size: 12px;color: #94a3b8;}
+.plan-period {font-size: 12px; color: #94a3b8;}
 /* Clean Feature List (Removes Green Ticks) */
-.plan-features {list-style: none; padding: 0; margin: 0 0 24px 0; flex: 1; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #f1f5f9; padding-top: 18px;}
+.plan-features {list-style: none; padding: 0; margin: 0 0 24px 0; flex: 1; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #f1f5f9; padding-top: 18px; }
 .plan-features li {font-size: 13px; color: var(--grey-600, #334155); line-height: 1.4; display: block;}
 /* Completely disables tick icon */
-.plan-features li::before {content: none !important; display: none !important;}
+.plan-features li::before {content: none !important; display: none !important; }
 .plan-card .btn {width: 100%; justify-content: center; margin-top: auto;}
 /* Enterprise Card Layout */
-.enterprise-card {background: #0f172a; color: #ffffff; border-radius: 16px; padding: 28px 36px; display: flex; align-items: center; justify-content: space-between; gap: 24px;}
-.enterprise-left {max-width: 300px;}
-.enterprise-left h3 {font-size: 20px; font-weight: 700; color: #ffffff; margin: 0 0 4px 0;}
-.enterprise-left p {font-size: 13px; color: #94a3b8; margin: 0; line-height: 1.4;}
-.enterprise-features {display: flex; flex-direction: column; gap: 8px;}
-.enterprise-feat {font-size: 13px; color: #cbd5e1;}
-.enterprise-feat::before {content: none !important;}
-.enterprise-right {flex-shrink: 0;}
+.enterprise-card {background: #0f172a; color: #ffffff; border-radius: 16px; padding: 28px 36px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.enterprise-left {max-width: 300px; }
+.enterprise-left h3 {font-size: 20px; font-weight: 700; color: #ffffff; margin: 0 0 4px 0; }
+.enterprise-left p {font-size: 13px; color: #94a3b8; margin: 0; line-height: 1.4; }
+.enterprise-features {display: flex; flex-direction: column; gap: 8px; }
+.enterprise-feat {font-size: 13px; color: #cbd5e1; }
+.enterprise-feat::before {content: none !important; }
+.enterprise-right {flex-shrink: 0; }
 /* Responsive Overrides */
-@media (max-width: 1024px) {.pricing-grid {grid-template-columns: repeat(2, 1fr);}
-  .enterprise-card {flex-direction: column; align-items: flex-start;}}
-@media (max-width: 640px) {.pricing-grid {grid-template-columns: 1fr; max-width: 420px; margin: 0 auto;}
+@media (max-width: 1024px) {.pricing-grid {grid-template-columns: repeat(2, 1fr); }
+  .enterprise-card {
+    flex-direction: column;
+    align-items: flex-start; }}
+    @media (max-width: 640px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;}}
     
     /* FAQ */
     .faq-list { max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
@@ -809,7 +814,7 @@
     .perf-trend { font-size:12px; font-weight:600; }
     .trend-up { color:var(--green); }
     .trend-dn { color:#DC2626; }
-    /* ── Enterprise  card ── */
+    /* ── Enterprise pricing card ── */
     .enterprise-card { background:var(--ink); border-radius:var(--r-xl); padding:32px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px; margin-top:20px; flex-wrap:wrap; }
     .enterprise-left h3 { font-family:'Montserrat', var(--font-display); font-size:22px; font-weight:700; color:#fff; margin-bottom:4px; }
     .enterprise-left p { font-size:14px; color:rgba(255,255,255,0.55); }
@@ -1586,15 +1591,13 @@
       <img src="data:image/jpeg;base64,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" alt="Maradar.ai">
       <span class="logo-text">Maradar.ai</span>
     </a>
-<nav class="nav-desktop">
-      <a href="#home">Home</a>
-      <a href="#product">Product</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#team">Team</a>
-      <a href="#contact">Contact</a>
+    <nav class="nav-desktop">
+      <a href="#home" class="active">Home</a>
+      <a href="#product" class="">Product</a>
+      <a href="#pricing" class="">Pricing</a>
+      <a href="#team" class="">Team</a>
+      <a href="#contact" class="">Contact</a>
     </nav>
-  </div>
-</header>
     <div class="nav-cta-group">
       <a href="https://app.maradar.ai" onclick="openAuthModal('ob-signin');return false;" class="btn btn-outline-white btn-sm">Sign in</a>
       <a href="https://app.maradar.ai/signup" onclick="openAuthModal('ob-signup');return false;" class="btn btn-amber btn-sm">Get started →</a>
@@ -2096,7 +2099,7 @@
 </div>
 
 <!-- ═══════════════ PRODUCT ═══════════════ -->
-<div class="page-section"id="product">
+<div class="page-section" id="product">
 <main>
 
 <section class="blog-hero">
@@ -2430,19 +2433,17 @@
   </div>
 </div>
 
-</section>
-
 </main>
 </div>
 
-<div class="page-section"id="pricing">
+<div class="page-section" id="pricing">
 <main>
 
 <section class="blog-hero">
   <div class="container">
     <span class="eyebrow"></span>
     <h1>Intelligence that scales with your growth.</h1>
-    <p>Start with what you need. Add more as you grow. Transparent plans with complete control.</p>
+    <p>Start with what you need. Add more as you grow. No lock-in. Cancel anytime.</p>
   </div>
 </section>
 <section class="section section-alt" style="padding-top:48px;">
@@ -2552,42 +2553,16 @@
       <h2 class="section-title">Frequently asked questions.</h2>
     </div>
     <div class="faq-list">
-    <details class="faq-item">
-        <summary>Which ad platforms does Maradar connect to?</summary>
-        <p>Maradar connects to Meta and Google ad accounts via official OAuth integrations. Additional platforms are on the roadmap. Reach out to ask about your specific setup.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How quickly will I see useful insights after connecting?</summary>
-        <p>Most accounts see meaningful intelligence within minutes of connecting. The more data available, the more specific the recommendations become. The intelligence also improves the longer you use the platform.</p>
-      </details>
-      
-      <details class="faq-item">
-        <summary>What is different about Maradar versus just using my platform dashboards?</summary>
-        <p>Platform dashboards show you what happened. Maradar tells you why, whether it was creative fatigue or competitive pressure. It also surfaces insights from competitor ads that platform dashboards cannot access.</p>
-      </details>
-      
-      <details class="faq-item">
-        <summary>Can I monitor multiple markets and competitor brands?</summary>
-        <p>Yes. Markets and competitor brands tracked scale with your plan, from 35 competitors on Starter up to 150 on the Scale tier.</p>
-      </details>
-      
-      <details class="faq-item">
-        <summary>Is my performance data shared with other brands?</summary>
-        <p>Never. Your performance data is yours alone and is never shared with, compared to, or used to improve recommendations for other brands. All cross-brand intelligence uses only anonymized, aggregated patterns. Individual brand data is fully isolated.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What are AI actions used for?</summary>
-        <p>AI actions power Ask Maradar queries, brief generation, and deep analysis reports. Each intelligence query costs 1 AI action. Unused actions do not roll over to the next month.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What is the 40% launch offer?</summary>
-        <p>New Starter, Growth, and Scale subscribers receive a 40% discount for their first 6 months. After 6 months, billing automatically transitions to the standard rate. Cancel anytime.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Can I change my plan or cancel anytime?</summary>
-        <p>Yes, you can upgrade or downgrade your plan at any time. Monthly subscriptions can be canceled anytime with no penalties. If you are on an annual contract, your cancellation will take effect at the end of your current 12-month billing cycle. Terms apply.</p>
-      </details>
+      <details class="faq-item"><summary>Which ad platforms does Maradar connect to?</summary><p>Maradar connects to Meta and Google ad accounts via official OAuth integrations. Additional platforms are on the roadmap, reach out to ask about your specific setup.</p></details>
+      <details class="faq-item"><summary>How quickly will I see useful insights after connecting?</summary><p>Most accounts see meaningful intelligence within minutes of connecting. The more data available, the more specific the recommendations and intelligence improves the longer you use it.</p></details>
+      <details class="faq-item"><summary>What's different about Maradar versus just using my platform dashboards?</summary><p>Platform dashboards show you what happened. Maradar tells you why — whether it was creative fatigue, competitive pressure, or a shift in seach trend. It also surfaces insights from competitor ads, search trends, and commerce data that platform dashboards don't have access to.</p></details>
+      <details class="faq-item"><summary>Can I monitor multiple markets and competitor brands?</summary><p>Yes. Markets and competitor brands tracked scale with your plan (35 competitors on Starter, up to 150 on Scale tier). You can also expand with add-on usage when needed.</p></details>
+      <details class="faq-item"><summary>Is my performance data shared with other brands?</summary><p>Never. Your performance data is yours alone and is never shared with, compared to, or used to improve recommendations for other brands. All cross-brand intelligence uses only anonymised, aggregated patterns — individual brand data is fully isolated.</p></details>
+      <details class="faq-item"><summary>What are credits used for?</summary><p>Credits power Ask Maradar queries, brief generation, and deep analysis reports. Each intelligence query costs 1 credit. Unused credits don't roll over. Add-on packs include additional credits.</p></details>
+      <details class="faq-item"><summary>What's the 40% launch offer?</summary><p>New Starter, Growth, and Scale subscribers receive a 40% discount for their first 6 months. After 6 months, billing automatically transitions to the standard rate. Cancel anytime.</p></details>
+      <details class="faq-item"><summary>Can I change my plan or cancel anytime?</summary><p>Yes — upgrade or downgrade anytime. No long-term contract. Cancel with no penalties.</p></details>
     </div>
+  </div>
 </section>
 
 <div class="cta-banner">
@@ -2597,7 +2572,7 @@
     <div class="cta-actions"><a href="https://app.maradar.ai/signup" onclick="openAuthModal('ob-signup');return false;" class="btn btn-white btn-lg">Get started →</a></div>
   </div>
 </div>
-</section>
+
 </main>
 </div>
 
@@ -2812,7 +2787,7 @@
     <div class="cta-actions"><a href="https://app.maradar.ai/signup" onclick="openAuthModal('ob-signup');return false;" class="btn btn-white btn-lg">Get started →</a></div>
   </div>
 </div>
-</section>
+
 </main>
 </div>
 
@@ -5316,7 +5291,7 @@
     <h1>Win more pitches. Deliver stronger results.</h1>
     <p>Give your team the market intelligence to back every recommendation with data, from the first audit to the monthly report.</p>
     <div style="margin-top:32px;">
-      <a href="#" class="btn btn-white btn-lg">See plans →</a>
+      <a href="#pricing" class="btn btn-white btn-lg">See plans →</a>
     </div>
   </div>
 </section>
