@@ -387,7 +387,8 @@
       background: linear-gradient(160deg, rgba(5,12,30,0.76) 0%, rgba(8,22,58,0.65) 60%, rgba(5,18,48,0.70) 100%);
       pointer-events: none;
     }
-    .hero-inner { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; position:relative; z-index:1; }
+    .hero-inner { display: flex;flex-direction: column;align-items: flex-start; /* This anchors everything to the left */text-align: left; max-width: 800px; /* Prevents text from stretching too wide on large screens */width: 100%;
+    }
     .hero-left { position:relative; z-index:1; }
     @media (max-width:900px) { .hero-inner { grid-template-columns:1fr; gap:48px; } }
     .hero-tag { margin-bottom:22px; }
@@ -410,18 +411,51 @@
     .hero-body { font-size:17px; line-height:1.65; color:#ffffff; margin-bottom:36px; max-width:480px; }
     .hero-cta { display:flex; flex-wrap:wrap; gap:12px; 
     }
-    /* Force the left side to align everything to the start */
-    .hero-left { display: flex; flex-direction: column; align-items: flex-start; text-align: left; max-width: 650px; /* Keeps it from stretching into the radar image */ width: 100%;}
-    /* Logos Container */
-    .platform-logos { display: flex; align-items: center; justify-content: flex-start; 
-    /* Forces logos to the left */
-    gap: 16px; margin-top: 1.5rem; margin-bottom: 1.5rem; width: 100%;}
-    /* CTA Wrapper */
-    .hero-cta { display: flex; align-items: center; justify-content: flex-start; /* Forces input and buttons to the left */ gap: 12px; flex-wrap: wrap; width: 100%;}
-    /* The URL Bar */
-    .url-input-wrapper { display: flex; align-items: center; gap: 10px; background-color: #ffffff; border: 1px solid #d1d5db; border-radius: 8px; padding: 12px 16px; min-width: 280px;}
-    .url-input { border: none; outline: none; width: 100%; font-size: 16px; color: #374151; background: transparent;}
+   /* Ensure the headline and paragraph don't have stray margins pulling them off-center */
+.hero-headline, .hero-body {
+  margin-left: 0;
+  padding-left: 0;
+}
 
+/* 2. Logos Container */
+.platform-logos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* 3. CTA Group Container (Input + Buttons) */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Keeps the row anchored left */
+  gap: 12px;
+  flex-wrap: wrap; /* Allows wrapping safely on mobile */
+  width: 100%;
+}
+
+/* 4. URL Input Field */
+.url-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 12px 16px;
+  min-width: 280px;
+}
+
+.url-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  color: #374151;
+  background: transparent;
+}
     .radar-wrap {
       position:absolute;
       left:50%; top:50%; transform:translate(-20%, -50%);
@@ -1693,38 +1727,38 @@
           </div>
         </div>
   <div class="container">
-    <div class="hero-inner">
-      <div class="hero-left">
-        <div class="tag hero-tag"> Ads intelligence Platform</div>
-        <h1 class="hero-headline">Scale your business with </span><strong><span class="amber-word">absolute certainty.</span></h1>
-        <p class="hero-body">Centralise your performance and competitor intelligence. Know exactly where to allocate your budget next.</p>
-        </div>
-       <!-- 1. Meta and Google Logos (Aligned Left) -->
-  <div class="platform-logos">
-    <!-- Meta Logo SVG -->
-    <svg width="24" height="24" viewBox="0 0 36 36" fill="#888888">
-      <path d="M27.24 9.17c-2.31 0-4.62.9-6.31 2.65L18 14.86l-2.93-3.04c-1.69-1.75-4-2.65-6.31-2.65-4.8 0-8.76 4-8.76 8.83 0 4.83 3.96 8.83 8.76 8.83 2.31 0 4.62-.9 6.31-2.65L18 21.14l2.93 3.04c1.69 1.75 4 2.65 6.31 2.65 4.8 0 8.76-4 8.76-8.83 0-4.83-3.96-8.83-8.76-8.83zm-16.48 14.1c-1.53 0-2.76-1.26-2.76-2.83 0-1.57 1.23-2.83 2.76-2.83 1.53 0 2.76 1.26 2.76 2.83 0 1.57-1.23 2.83-2.76 2.83zm16.48 0c-1.53 0-2.76-1.26-2.76-2.83 0-1.57 1.23-2.83 2.76-2.83 1.53 0 2.76 1.26 2.76 2.83 0 1.57-1.23 2.83-2.76 2.83z"/>
-    </svg>
-    <!-- Google Logo SVG -->
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-    </svg>
-  </div>
-       <!-- 2. URL Input Bar + Buttons (Aligned Left) -->
-  <div class="hero-cta">
-    <div class="url-input-wrapper">
-      <!-- Globe Icon SVG -->
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <line x1="2" y1="12" x2="22" y2="12"></line>
-        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-      </svg>
-      <input type="text" placeholder="your-website.com" class="url-input" />
-    </div>
+  <div class="hero-inner">
     
-    <a href="#pricing" class="btn btn-amber btn-lg" style="margin-left: 0;">Start Free</a>
-    <a href="#demo" class="btn btn-outline-white btn-lg" style="margin-left: 0;">Get a demo</a>
-  </div>
+    <!-- 1. Text Content -->
+    <div class="tag hero-tag">Ads intelligence Platform</div>
+    <h1 class="hero-headline">Scale your business with <br><strong><span class="amber-word">absolute certainty.</span></strong></h1>
+    <p class="hero-body">Centralise your performance and competitor intelligence. Know exactly where to allocate your budget next.</p>
+    
+    <!-- 2. Logos (Aligned Left) -->
+    <div class="platform-logos">
+      <!-- Meta Logo -->
+      <svg width="24" height="24" viewBox="0 0 36 36" fill="#888888">
+        <path d="M27.24 9.17c-2.31 0-4.62.9-6.31 2.65L18 14.86l-2.93-3.04c-1.69-1.75-4-2.65-6.31-2.65-4.8 0-8.76 4-8.76 8.83 0 4.83 3.96 8.83 8.76 8.83 2.31 0 4.62-.9 6.31-2.65L18 21.14l2.93 3.04c1.69 1.75 4 2.65 6.31 2.65 4.8 0 8.76-4 8.76-8.83 0-4.83-3.96-8.83-8.76-8.83zm-16.48 14.1c-1.53 0-2.76-1.26-2.76-2.83 0-1.57 1.23-2.83 2.76-2.83 1.53 0 2.76 1.26 2.76 2.83 0 1.57-1.23 2.83-2.76 2.83zm16.48 0c-1.53 0-2.76-1.26-2.76-2.83 0-1.57 1.23-2.83 2.76-2.83 1.53 0 2.76 1.26 2.76 2.83 0 1.57-1.23 2.83-2.76 2.83z"/>
+      </svg>
+      <!-- Google Logo -->
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+      </svg>
+    </div>
+
+    <!-- 3. Input and CTAs (Aligned Left in a Row) -->
+    <div class="hero-cta-group">
+      <div class="url-input-wrapper">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <input type="text" placeholder="your-website.com" class="url-input" />
+      </div>
+      <a href="#pricing" class="btn btn-amber btn-lg">Start Free</a>
+      <a href="#demo" class="btn btn-outline-white btn-lg">Get a demo</a>
+   </div>
 </div>
 </div>
       <div class="hero-right">
