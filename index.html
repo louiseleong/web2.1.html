@@ -384,6 +384,9 @@
     .hero-right { position: relative; z-index: 2; width: 100%; margin-top: 60px; }
     @media (max-width:900px) { .hero-inner { grid-template-columns:1fr; gap:48px; } }
     .url-input {color: #ffffff !important;}
+    .url-input::placeholder {color: rgba(255, 255, 255, 0.6) !important; opacity: 1; }
+    .url-input:-ms-input-placeholder {color: rgba(255, 255, 255, 0.6) !important; }
+    .url-input::-ms-input-placeholder {color: rgba(255, 255, 255, 0.6) !important; }
     .hero-tag { margin-bottom:22px; }
     .hero-section .tag { background:rgba(255,255,255,0.12); color:#fff; }
     .hero-section .tag::before { background:rgba(255,255,255,0.7); }
@@ -1688,7 +1691,7 @@
         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
       </svg>
       <input type="text" placeholder="your-welcome.com" class="url-input" style="background: transparent; border: none; outline: none; color: #ffffff; font-size: 15px; width: 100%;" />
-    </div>
+      </div>
    <a href="#pricing" class="btn btn-amber" style="padding: 11px 19px; font-size: 15px; white-space: nowrap;">Start Free</a>
   <a href="#demo" class="btn btn-outline-white" style="padding: 11px 19px; font-size: 15px; white-space: nowrap;">Get a demo</a>
   </div>
