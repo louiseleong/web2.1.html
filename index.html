@@ -379,9 +379,9 @@
       overflow: hidden;
     }
     .hero-section::before { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(5,12,30,0.76) 0%, rgba(8,22,58,0.65) 60%, rgba(5,18,48,0.70) 100%); pointer-events: none; }
-    .hero-inner { display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:center; position: relative; z-index:1; } 
+    .hero-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: flex-start; position: relative; z-index: 1; }
     .hero-left { position: relative; z-index: 1; }
-    .hero-right { position: relative; z-index: 2; width: 100%; margin-top: 40px; }
+    .hero-right { position: relative; z-index: 2; width: 100%; margin-top: 60px; }
     @media (max-width:900px) { .hero-inner { grid-template-columns:1fr; gap:48px; } }
     .hero-tag { margin-bottom:22px; }
     .hero-section .tag { background:rgba(255,255,255,0.12); color:#fff; }
