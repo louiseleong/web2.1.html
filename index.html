@@ -691,10 +691,10 @@
     .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:60px; }
     @media (max-width:780px) { .values-grid { grid-template-columns:1fr 1fr; } }
     @media (max-width:480px) { .values-grid { grid-template-columns:1fr; } }
-    .value-card { padding:22px; border-radius:var(--r-lg); border:1.5px solid var(--grey-100); background:var(--white); transition:border-color 0.2s; }
-    .value-card:hover { border-color:var(--blue); }
-    .value-icon { font-size:30px; margin-bottom:10px; }
-    .value-name { font-size:19px; font-weight:700; color:var(--ink); margin-bottom:5px; }
+    .value-card { padding:36px; 30px; border-radius:var(--r-lg); border:1.5px solid var(--grey-100); background:var(--white); transition:border-color 0.2s; }
+    .value-card:hover { border-color:var(--blue); transform: translateY(-2px); }
+    .value-icon { font-size:30px; margin-bottom:12px; }
+    .value-name { font-size:19px; font-weight:700; color:var(--ink); margin-bottom:8px; }
     .value-desc { font-size:16px; line-height:1.6; color:var(--grey-600); font-weight: 400 !important; }
     .join-banner { background:var(--off-white); border-radius:var(--r-xl); padding:44px; text-align:center; border:1.5px solid var(--grey-100); }
     .join-banner h3 { font-family:var(--font-display); font-style:normal; font-size:26px; font-weight:700; color:var(--ink); margin-bottom:10px; }
@@ -2636,7 +2636,7 @@
 <section class="section section-alt">
   <div class="container">
     <div class="section-header" style="margin-bottom:40px;">
-      <span class="eyebrow">Our Values</span>
+    <span class="eyebrow" style="color: var(--blue); font-weight: 600; text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em;">Our Values</span>
       <h2 class="section-title">What we believe.</h2>
     </div>
     <div class="values-grid">
