@@ -610,11 +610,10 @@
 .plan-desc {font-size: 12.5px; color: var(--grey-400, #64748b); min-height: 36px; line-height: 1.4; margin-bottom: 14px; }
 .plan-price {font-size: 36px; font-weight: 700; color: var(--ink, #0f172a); letter-spacing: -0.03em; line-height: 1; margin-bottom: 10px; }
 .plan-price sub {font-size: 14px; font-weight: 500; color: var(--grey-400, #64748b); }
-/* Inline Badges (40% Early Bird Promo) */
-.plan-badge-inline {display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 50px; margin-bottom: 6px; }
-.badge-trial {color: #00875a; background: #e6f8f2; }
-.badge-promo {color: #1d63b4; background: #edf5ff;}
-.plan-period {font-size: 12px; color: #94a3b8;}
+.function togglePricing(isAnnual) {const priceElements = document.querySelectorAll('.plan-price'); const periodElements = document.querySelectorAll('.plan-period'); priceElements.forEach(el => {const price = isAnnual ? el.getAttribute('data-annual') : el.getAttribute('data-monthly');
+    el.innerHTML = `${price}<sub>/mo</sub>`;}); periodElements.forEach(el => {
+  ``el.textContent = isAnnual ? 'Billed annually (20% off)' : 'Billed monthly';});
+}
 /* Clean Feature List (Removes Green Ticks) */
 .plan-features {list-style: none; padding: 0; margin: 0 0 24px 0; flex: 1; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #f1f5f9; padding-top: 18px; }
 .plan-features li {font-size: 13px; color: var(--grey-600, #334155); line-height: 1.4; display: block;}
