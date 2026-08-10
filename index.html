@@ -735,7 +735,8 @@
     .footer-col a:hover { color:#fff; text-decoration:none; }
     .footer-bottom { border-top:1px solid rgba(255,255,255,0.07); padding-top:22px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
     .footer-copy { font-size:13px; color:var(--white); }
-    html, body { background-color: var(--ink); /* or #000000 */ margin: 0; padding: 0; width: 100%; overflow-x: hidden; }                                                                                                                                                                                              
+    html, body { background-color: var(--ink); /* or #000000 */ margin: 0; padding: 0; min-height: 100%; width: 100%; box-sizing: border-box; }
+    *, *:before, *:after { box-sizing: inherit; }                                                                                                                                                                                              
 
     /* Scroll reveal */
     .reveal { opacity:0; transform:translateY(18px); transition:opacity 0.55s ease, transform 0.55s ease; }
