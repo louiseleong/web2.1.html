@@ -1736,33 +1736,61 @@
   </div>
 </section>
 
-
-<!-- DIAGNOSIS GRID -->
-<section class="section" style="background:var(--ink);">
+<!-- FEATURES -->
+<section class="section section-alt">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title" style="font-size:clamp(22px,5vw,56px);max-width:700px;margin-left:auto;margin-right:auto;color:var(--white);">You have the data. Now you need diagnosis.</h2>
-      <p class="section-body" style="color:rgba(255,255,255,0.65);"></p>
+      <span class="eyebrow">How Maradar works</span>
+      <h2 class="section-title">Multiple sources of intelligence.<br>One decision.</h2>
+      <p class="section-body">No single data source tells the full story. Maradar synthesises all intelligence sources into one Connected Diagnosis — the insight your team has been missing.</p>
     </div>
-    <div class="diagnosis-grid reveal" style="margin-top:48px;">
-      <div class="diagnosis-card">
-        <div class="diag-from">Platform Dashboards</div>
-        <div class="diag-arrow">↓</div>
-        <div class="diag-to"></div>
-        <p class="diag-desc">They show ROAS dropped. Maradar pinpoints the root cause, whether creative, competitor, or metric, so you fix the right issue.</p>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon" style="background:var(--purple-tint);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="feature-name">Creative Intelligence</div>
+        <p class="feature-desc">Which ad elements drive results for your brand: hook, angle, value prop, format, ion style, correlated with actual performance.</p>
+        <ul class="feature-bullets">
+          <li>Per-brand performance correlation</li>
+          <li>Creative fatigue detection</li>
+          <li>Campaign recommendations from winning patterns</li>
+        </ul>
       </div>
-      <div class="diagnosis-card">
-        <div class="diag-from">General AI Tools</div>
-        <div class="diag-arrow">↓</div>
-        <div class="diag-to"></div>
-        <p class="diag-desc">They analyze isolated prompts. Maradar leverages your performance history, brand guidelines, and live category trends.</p>
+      <div class="feature-card reveal d1 synthesis">
+        <div class="feature-icon" style="background:var(--blue-tint);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="feature-name">Campaign Performance</div>
+        <p class="feature-desc">Per-platform ROAS, CPA, CTR, frequency, with anomaly detection and fatigue signals so you act before the drop compounds.</p>
+        <ul class="feature-bullets">
+          <li>Real-time anomaly alerts</li>
+          <li>Spend pacing by market</li>
+          <li>Creative fatigue curves</li>
+        </ul>
       </div>
-      <div class="diagnosis-card">
-        <div class="diag-from">Point Solutions</div>
-        <div class="diag-arrow">↓</div>
-        <div class="diag-to"></div>
-        <p class="diag-desc">They answer one question. Maradar unifies performance, creative, and competitor insights into a single action.</p>
+      <div class="feature-card reveal d2">
+        <div class="feature-icon" style="background:var(--amber-tint);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+        <div class="feature-name">Competitive Intelligence</div>
+        <p class="feature-desc">What your competitors are scaling, what angles they've abandoned, and where the whitespace is from public ad library data.</p>
+        <ul class="feature-bullets">
+          <li>Competitor creative volume tracking</li>
+          <li>Unclaimed angle identification</li>
+          <li>Ad share of voice proxy signals</li>
+      </ul>
       </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon" style="background:var(--blue-tint);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </div>
+        <div class="feature-name">Connected Diagnosis</div>
+        <p class="feature-desc">The insight that requires different layers of intelligence, and is impossible without them:</p>
+        <div style="margin-top:14px;padding:14px 16px;background:rgba(36,105,170,0.06);border-left:3px solid var(--blue);border-radius:0 var(--r-sm) var(--r-sm) 0;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;">Example Diagnosis</div>
+          <p style="font-size:13px;line-height:1.6;color:var(--grey-600);margin:0;">Your ROAS dropped — but your creative approach hasn't changed and competitor volume is flat. Category search is down 22%. <strong style="color:var(--ink);">This is a seasonal trend trough. Don't change your creative — reduce spend temporarily.</strong></p>
+    </div>
     </div>
   </div>
 </section>
@@ -1874,6 +1902,36 @@
     <button class="why-dot" data-index="5" aria-label="Panel 6"></button>
   </div>
 </section>
+  
+<!-- DIAGNOSIS GRID -->
+<section class="section" style="background:var(--ink);">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" style="font-size:clamp(22px,5vw,56px);max-width:700px;margin-left:auto;margin-right:auto;color:var(--white);">You have the data. Now you need diagnosis.</h2>
+      <p class="section-body" style="color:rgba(255,255,255,0.65);"></p>
+    </div>
+    <div class="diagnosis-grid reveal" style="margin-top:48px;">
+      <div class="diagnosis-card">
+        <div class="diag-from">Platform Dashboards</div>
+        <div class="diag-arrow">↓</div>
+        <div class="diag-to"></div>
+        <p class="diag-desc">They show ROAS dropped. Maradar pinpoints the root cause, whether creative, competitor, or metric, so you fix the right issue.</p>
+      </div>
+      <div class="diagnosis-card">
+        <div class="diag-from">General AI Tools</div>
+        <div class="diag-arrow">↓</div>
+        <div class="diag-to"></div>
+        <p class="diag-desc">They analyze isolated prompts. Maradar leverages your performance history, brand guidelines, and live category trends.</p>
+      </div>
+      <div class="diagnosis-card">
+        <div class="diag-from">Point Solutions</div>
+        <div class="diag-arrow">↓</div>
+        <div class="diag-to"></div>
+        <p class="diag-desc">They answer one question. Maradar unifies performance, creative, and competitor insights into a single action.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- COMPARISON -->
 <section class="section" id="why-us" style="background:var(--white);">
@@ -1983,65 +2041,6 @@
     </div>
     <div style="text-align:center;margin-top:48px;" class="reveal d4">
       <a href="#pricing" class="btn btn-primary btn-lg">Get started →</a>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">How Maradar works</span>
-      <h2 class="section-title">Multiple sources of intelligence.<br>One decision.</h2>
-      <p class="section-body">No single data source tells the full story. Maradar synthesises all intelligence sources into one Connected Diagnosis — the insight your team has been missing.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card reveal">
-        <div class="feature-icon" style="background:var(--purple-tint);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <div class="feature-name">Creative Intelligence</div>
-        <p class="feature-desc">Which ad elements drive results for your brand: hook, angle, value prop, format, ion style, correlated with actual performance.</p>
-        <ul class="feature-bullets">
-          <li>Per-brand performance correlation</li>
-          <li>Creative fatigue detection</li>
-          <li>Campaign recommendations from winning patterns</li>
-        </ul>
-      </div>
-      <div class="feature-card reveal d1 synthesis">
-        <div class="feature-icon" style="background:var(--blue-tint);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <div class="feature-name">Campaign Performance</div>
-        <p class="feature-desc">Per-platform ROAS, CPA, CTR, frequency, with anomaly detection and fatigue signals so you act before the drop compounds.</p>
-        <ul class="feature-bullets">
-          <li>Real-time anomaly alerts</li>
-          <li>Spend pacing by market</li>
-          <li>Creative fatigue curves</li>
-        </ul>
-      </div>
-      <div class="feature-card reveal d2">
-        <div class="feature-icon" style="background:var(--amber-tint);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        </div>
-        <div class="feature-name">Competitive Intelligence</div>
-        <p class="feature-desc">What your competitors are scaling, what angles they've abandoned, and where the whitespace is from public ad library data.</p>
-        <ul class="feature-bullets">
-          <li>Competitor creative volume tracking</li>
-          <li>Unclaimed angle identification</li>
-          <li>Ad share of voice proxy signals</li>
-      </ul>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon" style="background:var(--blue-tint);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-      </div>
-        <div class="feature-name">Connected Diagnosis</div>
-        <p class="feature-desc">The insight that requires different layers of intelligence, and is impossible without them:</p>
-        <div style="margin-top:14px;padding:14px 16px;background:rgba(36,105,170,0.06);border-left:3px solid var(--blue);border-radius:0 var(--r-sm) var(--r-sm) 0;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;">Example Diagnosis</div>
-          <p style="font-size:13px;line-height:1.6;color:var(--grey-600);margin:0;">Your ROAS dropped — but your creative approach hasn't changed and competitor volume is flat. Category search is down 22%. <strong style="color:var(--ink);">This is a seasonal trend trough. Don't change your creative — reduce spend temporarily.</strong></p>
-    </div>
     </div>
   </div>
 </section>
