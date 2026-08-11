@@ -402,22 +402,6 @@
       position:absolute; border-radius:50%; border:1px solid rgba(160,190,240,0.35);
       top:50%; left:50%; transform:translate(-50%,-50%);
     }
-    /* Rotating sweep */
-    .radar-sweep {
-      position:absolute; width:50%; height:50%; top:0; left:50%;
-      transform-origin:0% 100%;
-      background:conic-gradient(from 0deg, transparent 0deg, rgba(100,160,255,0.30) 40deg, rgba(100,160,255,0.04) 70deg, transparent 70deg);
-      animation:radarSpin 4s linear infinite;
-      border-radius:0 100% 0 0;
-    }
-    @keyframes radarSpin { to { transform:rotate(360deg); } }
-    /* Sweep glow line */
-    .radar-line {
-      position:absolute; width:50%; height:1px; top:50%; left:50%;
-      background:linear-gradient(90deg,rgba(120,180,255,0.85),transparent);
-      transform-origin:0% 50%;
-      animation:radarSpin 4s linear infinite;
-    }
     /* Center dot */
     .radar-center {
       position:absolute; width:6px; height:6px; border-radius:50%;
