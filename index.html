@@ -668,9 +668,17 @@
 .feature-row.reverse { flex-direction: row-reverse; }
 .feature-col-text { flex: 1; max-width: 480px; }
 .feature-col-visual { flex: 1; max-width: 520px; }
+
+/* Split Section Alternating Layout Mapping */
+.split-section { padding: 90px 0; }
+.split-inner { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
+.split-section.split-alt .split-inner { flex-direction: row-reverse; }
+.split-content { flex: 1; max-width: 480px; }
+.split-img { flex: 1; max-width: 520px; }
+
 .feature-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #94A3B8; margin-bottom: 12px; }
 .feature-title { font-size: 38px; font-weight: 700; line-height: 1.2; color: #0F172A; margin-bottom: 16px; letter-spacing: -0.02em; }
-.feature-desc { font-size: 18px; line-height: 1.6; weight: 400; color: #64748B; margin-bottom: 24px; }
+.feature-desc { font-size: 18px; line-height: 1.6; font-weight: 400; color: #64748B; margin-bottom: 24px; }
 .feature-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
 .feature-checklist li { font-size: 13px; font-weight: 600; color: #475569; display: flex; align-items: center; gap: 8px; }
 .feature-checklist li::before { content: ''; width: 14px; height: 14px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310B981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat; }
@@ -685,7 +693,7 @@
 .feature-cta-group { display: flex; align-items: center; gap: 16px; margin-top: 24px; flex-wrap: wrap; }
 .btn-link { font-size: 14px; font-weight: 600; color: #2563EB; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
 .btn-link:hover { text-decoration: underline; }
-
+    
 /* Ask Maradar Section */
 .ask-maradar-section { padding: 100px 20px; background-color: #000000; text-align: center; }
 .ask-maradar-content { max-width: 680px; margin: 0 auto; }
