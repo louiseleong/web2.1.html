@@ -184,7 +184,7 @@
     /* Typography */
     .eyebrow {
       font-family: var(--font-body);
-      font-size: 11px; font-weight: 400 !important;
+      font-size: 12px; font-weight: 400 !important;
       letter-spacing: 0.12em; text-transform: uppercase;
       color: var(--white);
     }
@@ -192,14 +192,14 @@
       display: inline-flex; align-items: center; gap: 6px;
       padding: 5px 14px; border-radius: var(--r-full);
       background: var(--blue-tint); color: var(--blue);
-      font-family: var(--font-body); font-size: 13px; font-weight: 600;
+      font-family: var(--font-body); font-size: 13px; font-weight: 400 !important;
     }
     .tag::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--blue); }
 
     /* Buttons */
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 10px 24px; font-family: var(--font-body); font-size: 14px; font-weight: 600;
+      padding: 10px 24px; font-family: var(--font-body); font-size: 14px; font-weight: 400  !important;
       border-radius: var(--r-full); border: none; cursor: pointer; text-decoration: none;
       transition: all 0.2s; white-space: nowrap;
     }
@@ -237,7 +237,7 @@
     .logo { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
     .logo:hover { text-decoration:none; opacity:0.85; }
     .logo img { width:34px; height:34px; border-radius:var(--r-sm); object-fit:cover; }
-    .logo-text { font-family: var(--font-body); font-size:18px; font-weight:700; color:#fff; letter-spacing:-0.01em; }
+    .logo-text { font-family: var(--font-body); font-size:18px; font-weight:400  !important; color:#fff; letter-spacing:-0.01em; }
 
     .nav-desktop { display:none; }
     .nav-cta-group { display:none; align-items:center; gap:12px; }
@@ -415,7 +415,7 @@
     }
     .radar-dot-pulse { display:none; }
     .radar-dot-label {
-      font-family:var(--font-body); font-size:10px; font-weight:500;
+      font-family:var(--font-body); font-size:10px; font-weight:500 ;
       color:rgba(190,205,225,0.65); letter-spacing:0.06em; white-space:nowrap;
     }
     /* Crosshair lines */
@@ -585,7 +585,7 @@
     .seg { display:inline-flex; background:var(--grey-50); border-radius:var(--r-full); padding:3px; }
     .seg button { padding:4px 12px; font-size:12px; font-weight:600; border:none; border-radius:var(--r-full); cursor:pointer; background:transparent; color:var(--grey-400); transition:all 0.2s; }
     .seg button.active { background:var(--blue); color:#fff; }
-    .data-big { font-family:var(--font-body); font-size:34px; font-weight:700; color:var(--ink); letter-spacing:-0.03em; margin-bottom:4px; }
+    .data-big { font-family:var(--font-body); font-size:34px; font-weight:500; color:var(--ink); letter-spacing:-0.03em; margin-bottom:4px; }
     .data-delta { font-size:13px; font-weight:600; color:var(--green); }
     .chart-bars { height:140px; margin-top:18px; border-radius:var(--r-md); background:var(--off-white); display:flex; align-items:flex-end; padding:12px; gap:5px; overflow:hidden; }
     .chart-bar { flex:1; border-radius:3px 3px 0 0; background:var(--blue); opacity:0.7; transition:opacity 0.2s; }
@@ -949,9 +949,9 @@
       transition:border-color 0.2s, box-shadow 0.2s, transform 0.2s;
     }
     .diagnosis-card:hover { background:var(--blue-mid); box-shadow:0 8px 32px rgba(36,105,170,0.30); transform:translateY(-2px); }
-    .diag-from { font-family:var(--font-body); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.65); margin-bottom:6px; }
+    .diag-from { font-family:var(--font-body); font-size:11px; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.65); margin-bottom:6px; }
     .diag-arrow { font-size:18px; color:rgba(255,255,255,0.4); margin:8px 0; }
-    .diag-to { font-family:var(--font-body); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#fff; margin-bottom:12px; }
+    .diag-to { font-family:var(--font-body); font-size:11px; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:#fff; margin-bottom:12px; }
     .diag-body, .diag-desc { font-size:15px; line-height:1.65; color:rgba(255,255,255,0.88); }
     /* ── Insight example callouts ── */
     .insight-examples { margin-top:48px; display:flex; flex-direction:column; gap:16px; max-width:800px; margin-left:auto; margin-right:auto; }
@@ -1649,9 +1649,9 @@
 .ob-url-row:focus-within{border-color:var(--blue);}
 .ob-url-pre{padding:11px 12px;background:var(--grey-50);font-size:13px;color:var(--grey-400);border-right:1px solid var(--grey-100);white-space:nowrap;user-select:none;}
 .ob-url-row input{border:none;border-radius:0;flex:1;padding:11px 12px;font-size:14px;background:transparent;color:var(--ink);font-family:var(--font-body);outline:none;}
-.ob-btn{width:100%;padding:13px;background:var(--blue);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;margin-top:4px;font-family:var(--font-body);transition:background .14s;}
+.ob-btn{width:100%;padding:13px;background:var(--blue);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:400;cursor:pointer;margin-top:4px;font-family:var(--font-body);transition:background .14s;}
 .ob-btn:hover{background:#1B558B;}
-.ob-oauth-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;padding:11px;background:var(--white);border:1.5px solid var(--grey-100);border-radius:10px;font-size:14px;font-weight:500;color:var(--ink);cursor:pointer;font-family:var(--font-body);transition:border-color .15s;}
+.ob-oauth-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;padding:11px;background:var(--white);border:1.5px solid var(--grey-100);border-radius:10px;font-size:14px;font-weight:400;color:var(--ink);cursor:pointer;font-family:var(--font-body);transition:border-color .15s;}
 .ob-oauth-btn:hover{border-color:var(--blue);}
 .ob-or-divider{display:flex;align-items:center;gap:10px;margin:14px 0;font-size:13px;color:var(--grey-400);}
 .ob-or-divider::before,.ob-or-divider::after{content:'';flex:1;height:1px;background:var(--grey-100);}
@@ -1979,7 +1979,7 @@
       </div>
       <div class="split-img">
         <div style="background:var(--off-white);border-radius:var(--r-xl);padding:28px;border:1.5px solid var(--grey-100);">
-          <div style="font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Competitor Creative Winning Factors</div>
+          <div style="font-family:var(--font-body);font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Competitor Creative Winning Factors</div>
           
           <div style="margin-bottom:18px;">
             <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--grey-600);margin-bottom:6px;">
@@ -2406,7 +2406,7 @@
       </div>
       <div class="split-img">
         <div style="background:var(--off-white);border-radius:var(--r-xl);padding:28px;border:1.5px solid var(--grey-100);">
-          <div style="font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Morning briefing · Today</div>
+          <div style="font-family:var(--font-body);font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Morning briefing · Today</div>
           <div class="cadence-list">
             <div class="cadence-item"><div class="cadence-dot" style="background:var(--rose);"></div><div class="cadence-text"><strong>Alert:</strong> AU Meta spend 2.8× above daily target — ad set #4421 needs review</div></div>
             <div class="cadence-item"><div class="cadence-dot" style="background:var(--amber);"></div><div class="cadence-text"><strong>Fatigue:</strong> Top performer CTR dropped 23% vs 7-day average — refresh required</div></div>
@@ -2425,7 +2425,7 @@
     <div class="split-inner">
       <div class="split-img">
         <div style="background:var(--white);border-radius:var(--r-xl);padding:28px;border:1.5px solid var(--grey-100);">
-          <div style="font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Weekly review · This week</div>
+          <div style="font-family:var(--font-body);font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Weekly review · This week</div>
           <div class="cadence-list">
             <div class="cadence-item"><div class="cadence-dot"></div><div class="cadence-text"><strong>Winners:</strong> Testimonial hook + convenience angle → 3.1× ROAS vs average</div></div>
             <div class="cadence-item"><div class="cadence-dot" style="background:var(--rose);"></div><div class="cadence-text"><strong>Underperforming:</strong> Lifestyle imagery ads → 0.8× ROAS — pull or rebrief</div></div>
@@ -2453,7 +2453,7 @@
       </div>
       <div class="split-img">
         <div style="background:var(--off-white);border-radius:var(--r-xl);padding:28px;border:1.5px solid var(--grey-100);">
-          <div style="font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Monthly market review</div>
+          <div style="font-family:var(--font-body);font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Monthly market review</div>
           <div class="cadence-list">
             <div class="cadence-item"><div class="cadence-dot"></div><div class="cadence-text"><strong>SG:</strong> Category search +35% QoQ · Upgrade to Grow · +40% budget recommended</div></div>
             <div class="cadence-item"><div class="cadence-dot" style="background:var(--amber);"></div><div class="cadence-text"><strong>AU:</strong> Seasonal trend trough · Hold spend · Don't change creative</div></div>
@@ -2472,7 +2472,7 @@
     <div class="split-inner">
       <div class="split-img">
         <div style="background:var(--white);border-radius:var(--r-xl);padding:28px;border:1.5px solid var(--grey-100);">
-          <div style="font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Quarterly review · Q2 2026</div>
+          <div style="font-family:var(--font-body);font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Quarterly review · Q2 2026</div>
           <div class="cadence-list">
             <div class="cadence-item"><div class="cadence-dot"></div><div class="cadence-text"><strong>Lens 1 · Brand:</strong> ROAS +12% vs own Q1 baseline, adjusted for seasonality</div></div>
             <div class="cadence-item"><div class="cadence-dot" style="background:var(--amber);"></div><div class="cadence-text"><strong>Lens 2 · Competitors:</strong> Brand search grew 5% vs category 35% — losing share.</div></div>
@@ -2515,7 +2515,7 @@
       </div>
       <div class="split-img">
         <div style="background:var(--off-white);border-radius:var(--r-xl);padding:28px;border:1.5px solid var(--grey-100);">
-          <div style="font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Generic AI vs Maradar</div>
+          <div style="font-family:var(--font-body);font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Generic AI vs Maradar</div>
           <div style="margin-bottom:16px;">
             <div style="font-size:12px;font-weight:600;color:var(--grey-400);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Generic AI says:</div>
             <div style="padding:12px 14px;background:var(--grey-50);border-radius:var(--r-md);font-size:13px;color:var(--grey-600);line-height:1.6;">"Consider testing different creative formats and targeting options to improve your ROAS performance."</div>
@@ -2666,7 +2666,7 @@
       </div>
       <div class="split-img">
         <div style="background:var(--off-white);border-radius:var(--r-xl);padding:28px;border:1.5px solid var(--grey-100);">
-          <div style="font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Competitor Creative Winning Factors</div>
+          <div style="font-family:var(--font-body);font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Competitor Creative Winning Factors</div>
           
           <div style="margin-bottom:18px;">
             <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--grey-600);margin-bottom:6px;">
@@ -3695,7 +3695,7 @@
   <div class="article-overlay-header">
     <button class="article-back-btn" id="article-back-btn" onclick="closeArticle()">← Back to Blog</button>
     <div class="article-overlay-logo">
-      <span style="font-family:var(--font-body);font-size:15px;font-weight:700;color:var(--blue);">Maradar.ai</span>
+      <span style="font-family:var(--font-body);font-size:15px;font-weight:400;color:var(--blue);">Maradar.ai</span>
     </div>
   </div>
   <div class="article-content" id="article-content">
