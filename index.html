@@ -711,8 +711,8 @@
     @media (max-width: 768px) {
       .signal-row { flex-direction: column; align-items: flex-start; }
       .ask-maradar-section { padding: 70px 20px; }
-      .ask-maradar-title { font-size: 32px; }
-      .ask-maradar-desc { font-size: 15px; }
+      .ask-maradar-title { font-size: 44px; }
+      .ask-maradar-desc { font-size: 16px; }
     }
     
     /* ── Pricing ── */
@@ -2654,15 +2654,162 @@
 </div>
 
 <!-- ASK MARADAR -->
-<div class="ask-section">
+<!-- ASK-MARADAR -->
+<div class="split-section" style="background:#030712;padding:90px 0;">
   <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Ask-Maradar</span>
-      <h2 class="section-title" style="color:var(--white);">Investigate and<br> deep dive now.</h2>
-      <p class="section-body" style="color:rgba(255,255,255,0.6);">Ask-Maradar pairs your Meta and Google campaign performance with a creative analysis and competitor ads, instantly generates actionable creative and media briefs for your team.</p>
+    <div class="split-inner">
+      
+      <!-- Content (Visual: LEFT / Text: LEFT) -->
+      <div class="split-content">
+        <span class="eyebrow" style="color:#94A3B8;">ASK-MARADAR</span>
+        <h2 class="split-title" style="color:#FFFFFF;">Investigate and<br>deep dive now.</h2>
+        <p class="split-body" style="color:#94A3B8;">Ask-Maradar pairs your Meta and Google campaign performance with a creative analysis and competitor ads, instantly generates actionable creative and media briefs for your team.</p>
+        <div class="split-actions">
+          <a href="#" class="btn btn-primary">Get started →</a>
+          <a href="#contact" style="font-size:14px;font-weight:600;color:var(--blue, #2563EB);">Schedule demo →</a>
+        </div>
+      </div>
+
+      <!-- Interactive Widget (Visual: RIGHT) -->
+      <div class="split-img">
+        <div style="background:#F7F5F0;border-radius:var(--r-xl, 20px);overflow:hidden;box-shadow:0 25px 50px -12px rgba(0, 0, 0, 0.5);height:480px;display:flex;flex-direction:column;color:#0F172A;box-sizing:border-box;">
+          
+          <!-- Widget Header -->
+          <div style="background:#FFFFFF;padding:16px 24px;border-bottom:1px solid #E2E8F0;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:14px;font-weight:700;color:#0F172A;">Ask Maradar</span>
+            <button type="button" id="resetChatBtn" style="background:none;border:none;color:#94A3B8;font-size:12px;font-weight:600;display:flex;align-items:center;gap:4px;cursor:pointer;padding:4px 8px;border-radius:6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 11-.57-8.38l5.67-5.67"/></svg>
+              Reset
+            </button>
+          </div>
+
+          <!-- Chat Scroll Body -->
+          <div id="chatContainer" style="flex:1;padding:24px;overflow-y:auto;display:flex;flex-direction:column;gap:16px;scroll-behavior:smooth;">
+            
+            <!-- Welcome Screen -->
+            <div id="welcomeScreen" style="margin:auto;text-align:center;display:flex;flex-direction:column;align-items:center;">
+              <div style="width:44px;height:44px;background:#EFF6FF;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v3m0 12v3M3 12h3m12 0h3m-3.5-6.5l-2.2 2.2m-8.6 8.6l-2.2 2.2m0-13l2.2 2.2m8.6 8.6l2.2 2.2"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+              <h3 style="font-size:22px;font-weight:700;color:#0F172A;margin:0 0 8px 0;letter-spacing:-0.01em;">Good evening, there</h3>
+              <p style="font-size:13px;color:#64748B;margin:0;max-width:320px;line-height:1.4;">Your data is live. What are we winning with — or fixing — today?</p>
+            </div>
+
+            <!-- Dynamic Messages -->
+            <div id="chatMessages" style="display:flex;flex-direction:column;gap:12px;width:100%;"></div>
+
+          </div>
+
+          <!-- Input Footer & Quick Pills -->
+          <div style="padding:16px 20px 20px;display:flex;flex-direction:column;gap:12px;">
+            <form id="chatForm" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:6px 6px 6px 16px;display:flex;align-items:center;gap:8px;box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+              <input type="text" id="chatInput" placeholder="Brief a new campaign, decode a competitor, explore a trend..." autocomplete="off" style="flex:1;border:none;outline:none;font-size:12px;color:#1E293B;background:transparent;" />
+              <button type="submit" style="background:#3B82F6;color:#FFFFFF;border:none;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              </button>
+            </form>
+
+            <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;">
+              <button type="button" class="pill-btn" data-query="performance summary" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:6px 12px;font-size:11px;font-weight:600;color:#475569;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:4px;">📊 Insights</button>
+              <button type="button" class="pill-btn" data-query="strategy analysis" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:6px 12px;font-size:11px;font-weight:600;color:#475569;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:4px;">🗺️ Strategy</button>
+              <button type="button" class="pill-btn" data-query="creative analysis" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:6px 12px;font-size:11px;font-weight:600;color:#475569;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:4px;">🎨 Creative</button>
+              <button type="button" class="pill-btn" data-query="competitor analysis" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:6px 12px;font-size:11px;font-weight:600;color:#475569;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:4px;">⚔️ Compete</button>
+              <button type="button" class="pill-btn" data-query="market trends" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:6px 12px;font-size:11px;font-weight:600;color:#475569;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:4px;">🌐 Market</button>
+              <button type="button" class="pill-btn" data-query="generate creative brief" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:6px 12px;font-size:11px;font-weight:600;color:#475569;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:4px;">📋 Brief</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const chatMessages = document.getElementById('chatMessages');
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const chatContainer = document.getElementById('chatContainer');
+    const resetChatBtn = document.getElementById('resetChatBtn');
+    const pillBtns = document.querySelectorAll('.pill-btn');
+
+    const mockResponses = {
+      creative: `<strong>🎨 Creative Intelligence Summary (Last 30 Days)</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Top Hook:</strong> "Clinical Trial Results" (3.8x ROAS, +42% CTR vs avg).</li><li><strong>Fatigue Warning:</strong> "Unboxing Reel v2" CTR declined 18% this week.</li><li><strong>Actionable Move:</strong> Swap Hook #2 in Meta Ad Set 04 with a UGC dermatologist testimonial angle.</li></ul>`,
+      competitor: `<strong>⚔️ Competitor Shift Alert</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Rival Action:</strong> Competitor A increased Meta ad spend by 35% in HK over the last 14 days.</li><li><strong>Winning Angle:</strong> Scaling a 3-step routine concept targeting anti-aging terms.</li><li><strong>Recommended Counter:</strong> Launch comparison ads highlighting clinical trial credentials.</li></ul>`,
+      performance: `<strong>📊 Cross-Platform Performance Pulse</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Combined Revenue:</strong> $15,793.68 (+25.6% MoM)</li><li><strong>Meta ROAS:</strong> 3.9x | <strong>Google ROAS:</strong> 2.8x</li><li><strong>Primary Driver:</strong> Meta Advantage+ campaign efficiency following creative refresh on June 12.</li></ul>`,
+      strategy: `<strong>🗺️ Strategic Diagnosis & Next Moves</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Opportunity:</strong> Google Search impression share dropped 12% on branded terms while competitors bidding surged.</li><li><strong>Budget Reallocation:</strong> Shift $1,200/week from low-ROAS retargeting into Meta winning video creative.</li></ul>`,
+      market: `<strong>🌐 Market Trend Radar</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Category Insight:</strong> Anti-aging search volume peaked (+28% MoM across HK & SG).</li><li><strong>Consumer Sentiment:</strong> High engagement on "dermatologist approved" and "ingredient breakdown" hooks.</li></ul>`,
+      brief: `<strong>📋 Generated Creative Brief #402</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Objective:</strong> Capture rival anti-aging market share.</li><li><strong>Hook:</strong> "Stop using standard serums until you see clinical trial results."</li><li><strong>Format:</strong> 15s Split Screen UGC + Clinical Proof overlay.</li></ul>`,
+      default: `<strong>✦ Maradar Live Analysis</strong><br>Based on your live Meta and Google data, scaling creative angle <strong>"Clinical Proof"</strong> is projected to lower overall CAC by 14%. Generating tailored recommendations now...`
+    };
+
+    function appendMessage(text, isUser = false) {
+      if (welcomeScreen.style.display !== 'none') welcomeScreen.style.display = 'none';
+      const msg = document.createElement('div');
+      msg.style.cssText = `max-width:85%;padding:12px 16px;border-radius:14px;font-size:13px;line-height:1.5;${
+        isUser 
+          ? 'align-self:flex-end;background:#2563EB;color:#FFFFFF;border-bottom-right-radius:4px;' 
+          : 'align-self:flex-start;background:#FFFFFF;color:#1E293B;border:1px solid #E2E8F0;border-bottom-left-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.03);'
+      }`;
+      msg.innerHTML = text;
+      chatMessages.appendChild(msg);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    function handleBotReply(query) {
+      const q = query.toLowerCase();
+      let key = 'default';
+      if (q.includes('creative')) key = 'creative';
+      else if (q.includes('compet') || q.includes('compete')) key = 'competitor';
+      else if (q.includes('perform') || q.includes('insight') || q.includes('summary')) key = 'performance';
+      else if (q.includes('strat')) key = 'strategy';
+      else if (q.includes('market') || q.includes('trend')) key = 'market';
+      else if (q.includes('brief')) key = 'brief';
+
+      const indicator = document.createElement('div');
+      indicator.id = 'typingIndicator';
+      indicator.style.cssText = 'align-self:flex-start;background:#FFFFFF;color:#64748B;border:1px solid #E2E8F0;border-radius:14px;padding:12px 16px;font-size:13px;';
+      indicator.innerHTML = '<em>Maradar is analyzing live streams...</em>';
+      chatMessages.appendChild(indicator);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      setTimeout(() => {
+        const ind = document.getElementById('typingIndicator');
+        if (ind) ind.remove();
+        appendMessage(mockResponses[key], false);
+      }, 600);
+    }
+
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = chatInput.value.trim();
+      if (!text) return;
+      appendMessage(text, true);
+      chatInput.value = '';
+      handleBotReply(text);
+    });
+
+    pillBtns.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const query = pill.getAttribute('data-query');
+        appendMessage(query, true);
+        handleBotReply(query);
+      });
+    });
+
+    resetChatBtn.addEventListener('click', () => {
+      chatMessages.innerHTML = '';
+      welcomeScreen.style.display = 'flex';
+      chatInput.value = '';
+    });
+  });
+</script>
 
 <!-- 1. Connected Intelligence (Visual: RIGHT) -->
 <div class="split-section">
