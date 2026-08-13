@@ -635,42 +635,63 @@
     .fill-amber { background-color: #F59E0B; }
     .fill-purple { background-color: #8B5CF6; }
 
-    /* — Workflow & Action Section — */
-   /* — Product Page Feature Section Only (Scoped Isolation) — */
-    .product-features .feature-section { padding: 90px 0; }
-    .product-features .bg-white { background-color: #FFFFFF; }
-    .product-features .bg-alt { background-color: #F8FAFC; }
-    /* Grid Layout */
-    .product-features .feature-row { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
-    .product-features .feature-row.reverse { flex-direction: row-reverse; }
-    .product-features .feature-col-text { flex: 1 0 480px; max-width: 480px; }
-    .product-features .feature-col-visual { flex: 1 0 520px; max-width: 520px; }
-    /* Text Content - Maradar Brand System */
-    .product-features .feature-eyebrow { display: block; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #64748B; margin-bottom: 12px; }
-    .product-features .feature-title { font-family: var(--font-display, inherit); font-size: clamp(30px, 3.5vw, 42px); font-weight: 700; line-height: 1.18; color: var(--ink, #0F172A); margin-bottom: 18px; letter-spacing: -0.01em; }
-    .product-features .feature-desc { font-size: 18px; font-weight: 400; line-height: 1.65; color: var(--grey-600, #334155); margin-bottom: 28px; }
-    /* Checklist Items */
-    .product-features .feature-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
-    .product-features .feature-checklist li { font-size: 15px; font-weight: 400; color: #334155; display: flex; align-items: center; gap: 10px; }
-    .product-features .feature-checklist li::before { content: ''; width: 16px; height: 16px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310B981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat; }
-    /* UI Card & Briefing Container */
-    .product-features .briefing-card-container { background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--r-xl, 20px); padding: 28px; box-shadow: var(--shadow-lg, 0 20px 40px -15px rgba(15, 23, 42, 0.05)); display: flex; flex-direction: column; gap: 14px; }
-    .product-features .briefing-header { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #94A3B8; margin-bottom: 8px; }
-    /* Stacked Pill Notifications */
-    .product-features .briefing-pill { background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 14px 18px; font-size: 15px; font-weight: 400; color: #1E293B; line-height: 1.5; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02); }
-    .product-features .status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
-    /* Dot Color Indicators */
-    .product-features .dot-red { background-color: #EF4444; }
-    .product-features .dot-amber { background-color: #F59E0B; }
-    .product-features .dot-blue { background-color: #3B82F6; }
-    .product-features .dot-green { background-color: #10B981; }
-    /* Responsive */
-    @media (max-width: 900px) {
-  .product-features .feature-row, .product-features .feature-row.reverse { flex-direction: column; gap: 40px; text-align: left; }
-  .product-features .feature-col-text, .product-features .feature-col-visual { max-width: 100%; width: 100%; flex: 1 1 auto; }
-  .product-features .feature-title { font-size: 32px; }
-  .product-features .feature-desc { font-size: 16px; }
-    }
+    /* Workspace & Signals Section */
+    .workspace-section { padding: 80px 0; background-color: #F3F5F8; }
+    .workspace-header { text-align: center; max-width: 680px; margin: 0 auto 48px; }
+    .workspace-header h2 { font-size: 40px; line-height: 1.2; color: #0F172A; margin-bottom: 16px; font-weight: 700; }
+    .workspace-header p { font-size: 16px; color: #64748B; line-height: 1.6; }
+    .signals-card { background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 20px; overflow: hidden; max-width: 1000px; margin: 0 auto; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02); }
+    .signals-topbar { background-color: #EEF0F6; padding: 16px 28px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E2E8F0; }
+    .signals-topbar-title { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #64748B; }
+    .signals-topbar-meta { font-size: 13px; font-weight: 500; color: #94A3B8; }
+    .signal-row { padding: 24px 28px; border-bottom: 1px solid #F1F5F9; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+    .signal-row:last-child { border-bottom: none; }
+    .signal-content { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+    .signal-header-line { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .signal-title { font-size: 15px; font-weight: 700; color: #0F172A; line-height: 1.4; }
+    .signal-desc { font-size: 14px; color: #64748B; line-height: 1.5; }
+    .badge-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 6px; }
+    .action-pill { font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 99px; white-space: nowrap; }
+    .theme-anomaly .badge-tag, .theme-anomaly .action-pill { background-color: #FEE2E2; color: #EF4444; }
+    .theme-creative .badge-tag, .theme-creative .action-pill { background-color: #DBEAFE; color: #2563EB; }
+    .theme-market .badge-tag, .theme-market .action-pill { background-color: #D1FAE5; color: #10B981; }
+    .theme-competitor .badge-tag, .theme-competitor .action-pill { background-color: #FEF3C7; color: #D97706; }
+    .subtag-list { display: flex; gap: 6px; margin-top: 4px; }
+    .subtag-item { font-size: 12px; font-weight: 600; color: #64748B; background-color: #F1F5F9; padding: 3px 10px; border-radius: 99px; }
+
+    /* Feature Rows & Briefing */
+    .feature-section { padding: 90px 0; }
+    .bg-white { background-color: #FFFFFF; }
+    .bg-alt { background-color: #F4F6F9; }
+    .feature-row { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
+    .feature-row.reverse { flex-direction: row-reverse; }
+    .feature-col-text { flex: 1; max-width: 480px; }
+    .feature-col-visual { flex: 1; max-width: 520px; }
+
+    /* Split Section Alternating Layout Mapping */
+    .split-section { padding: 90px 0; }
+    .split-inner { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
+    .split-section.split-alt .split-inner { flex-direction: row-reverse; }
+    .split-content { flex: 1; max-width: 480px; }
+    .split-img { flex: 1; max-width: 520px; }
+
+    .feature-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #94A3B8; margin-bottom: 12px; }
+    .feature-title { font-size: 38px; font-weight: 700; line-height: 1.2; color: #0F172A; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .feature-desc { font-size: 18px; line-height: 1.6; font-weight: 400; color: #64748B; margin-bottom: 24px; }
+    .feature-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .feature-checklist li { font-size: 13px; font-weight: 600; color: #475569; display: flex; align-items: center; gap: 8px; }
+    .feature-checklist li::before { content: ''; width: 14px; height: 14px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310B981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat; }
+    .briefing-card-container { background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 24px; padding: 32px; box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.07); display: flex; flex-direction: column; gap: 12px; }
+    .briefing-header { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #94A3B8; margin-bottom: 8px; }
+    .briefing-pill { background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 14px 18px; font-size: 13px; font-weight: 600; color: #1E293B; line-height: 1.5; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02); }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+    .dot-red { background-color: #EF4444; }
+    .dot-amber { background-color: #F59E0B; }
+    .dot-blue { background-color: #3B82F6; }
+    .dot-green { background-color: #10B981; }
+    .feature-cta-group { display: flex; align-items: center; gap: 16px; margin-top: 24px; flex-wrap: wrap; }
+    .btn-link { font-size: 14px; font-weight: 600; color: #2563EB; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+    .btn-link:hover { text-decoration: underline; }
     
     /* Ask Maradar Section */
     .ask-maradar-section { padding: 90px 20px; background-color: #000000; text-align: left; }
