@@ -499,34 +499,46 @@
     .legend-item { display:flex; align-items:center; gap:6px; font-size:11px; color:var(--grey-600); }
     .legend-dot { width:28px; height:3px; border-radius:2px; }
 
-    /* — Feature Rows & Alternating Backgrounds — */
+    /* — Feautures - Workflow & Action Section — */
+    .workflow-section { padding: 90px 0; background-color: #FAFAFC; }
+    .workflow-header { text-align: center; max-width: 720px; margin: 0 auto 80px auto; }
+    .workflow-steps { display: flex; flex-direction: column; gap: 80px; }
+
+    /* Grid Layout */
+    .workflow-step { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
+    .workflow-step.reverse { flex-direction: row-reverse; }
+    .step-col-text { flex: 1 0 480px; max-width: 480px; }
+    .step-col-visual { flex: 1 0 520px; max-width: 520px; }
+
+    /* Step Number Badge */
+    .step-number-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .step-number { font-size: 32px; font-weight: 800; color: #2563EB; letter-spacing: -0.03em; }
+    .step-line { height: 2px; width: 40px; background-color: #2563EB; }
+
+    /* Text Content */
+    .step-title { font-size: 38px; font-weight: 700; line-height: 1.2; color: #0F172A; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .step-desc { font-size: 15px; line-height: 1.6; color: #475569; margin-bottom: 24px; }
+
+    /* Feature Pills */
+    .step-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .step-pill { background-color: #EFF6FF; color: #1D4ED8; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 16px; }
+
+    /* Visual Mock Card Container */
+    .step-visual-card { background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 20px; padding: 32px; box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.05); }
+
+    /* Legacy Feature Compatibility */
     .feature-section { padding: 90px 0; }
     .bg-white { background-color: #FFFFFF; }
     .bg-alt { background-color: #F4F6F9; }
-
-    /* Grid Layout */
     .feature-row { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
     .feature-row.reverse { flex-direction: row-reverse; }
-    .feature-col-text { flex: 1 0 480px; max-width: 480px; } /* Updated: Prevent flex shrinking */
-    .feature-col-visual { flex: 1 0 520px; max-width: 520px; } /* Updated: Prevent flex shrinking */
-
-    /* Text Content */
-    .feature-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #64748B; margin-bottom: 12px; } /* Updated: Darker color for contrast */
-    .feature-title { font-size: 38px; font-weight: 700; line-height: 1.2; color: #0F172A; margin-bottom: 16px; letter-spacing: -0.02em; }
-    .feature-desc { font-size: 15px; line-height: 1.6; color: #64748B; margin-bottom: 24px; }
+    .feature-col-text { flex: 1 0 480px; max-width: 480px; }
+    .feature-col-visual { flex: 1 0 520px; max-width: 520px; }
 
     /* Checklist Items */
     .feature-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
     .feature-checklist li { font-size: 13px; font-weight: 600; color: #475569; display: flex; align-items: center; gap: 8px; }
     .feature-checklist li::before { content: ''; width: 14px; height: 14px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310B981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat; }
-
-    /* Briefing UI Card Container */
-    .briefing-card-container { background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 24px; padding: 32px; box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.07); display: flex; flex-direction: column; gap: 12px; }
-    .briefing-header { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #94A3B8; margin-bottom: 8px; }
-
-    /* Stacked Pill Notifications */
-    .briefing-pill { background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 14px 18px; font-size: 13px; font-weight: 600; color: #1E293B; line-height: 1.5; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02); }
-    .status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
 
     /* Dot Color Indicators */
     .dot-red { background-color: #EF4444; }
@@ -536,25 +548,10 @@
 
     /* Responsive */
     @media (max-width: 900px) {
-      .feature-row, .feature-row.reverse { flex-direction: column; gap: 40px; text-align: left; }
-      .feature-col-text, .feature-col-visual { max-width: 100%; width: 100%; flex: 1 1 auto; }
-      .feature-title { font-size: 30px; }
+      .workflow-step, .workflow-step.reverse, .feature-row, .feature-row.reverse { flex-direction: column; gap: 40px; text-align: left; }
+      .step-col-text, .step-col-visual, .feature-col-text, .feature-col-visual { max-width: 100%; width: 100%; flex: 1 1 auto; }
+      .step-title, .feature-title { font-size: 30px; }
     }
-    /* Split sections */
-    .split-section { padding:96px 0; }
-    .split-alt { background:var(--off-white); }
-    .split-inner { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
-    @media (max-width:900px) { .split-inner { grid-template-columns:1fr; gap:48px; } }
-    .split-img { border-radius:var(--r-xl); overflow:hidden; box-shadow:var(--shadow-lg); }
-    .split-img img { width:100%; display:block; }
-    .split-content .eyebrow { display:block; margin-bottom:14px; }
-    .split-title {
-      font-family:var(--font-display); font-style:normal; font-weight:700;
-      font-size:clamp(24px, 3vw, 34px); line-height:1.2; letter-spacing:-0.01em;
-      color:var(--ink); margin-bottom:16px;
-    }
-    .split-body { font-size:15px; line-height:1.7; color:var(--grey-600); margin-bottom:28px; }
-    .split-actions { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
 
      /* Ask Maradar Section */
     .ask-maradar-section { padding: 90px 20px; background-color: #000000; text-align: left; }
@@ -1848,180 +1845,202 @@
 </section>
 
 <!-- FEATURES -->
-<section class="section section-alt">
-    <div class="section-header">
-      <span class="eyebrow">How Maradar works</span>
-      <h2 class="section-title">Multiple sources of intelligence.<br>One clear Advantage.</h2>
-      <p class="section-body">No single data source tells the full story. Maradar synthesises all intelligence layers into one Connected Diagnosis.</p>
+<!-- WORKFLOW SECTION: ONE PLATFORM, COMPLETE WORKFLOW -->
+<section class="workflow-section" style="background:#FAFAFC; padding:120px 0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#0F172A;">
+  <div class="workflow-container" style="max-width:1200px; margin:0 auto; padding:0 24px;">
+    
+    <!-- Section Header -->
+    <div style="text-align:center; max-width:720px; margin:0 auto 80px auto;">
+      <span style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:#2563EB; display:block; margin-bottom:12px;">ACTION-ORIENTED INTELLIGENCE</span>
+      <h2 style="font-size:44px; font-weight:800; line-height:1.15; letter-spacing:-0.02em; color:#0F172A; margin:0 0 16px 0;">One Platform, Complete Workflow</h2>
+      <p style="font-size:18px; line-height:1.6; color:#64748B; margin:0;">From seamless data integration to rapid campaign scaling, execute your growth strategy through an integrated five-step engine.</p>
     </div>
-<!-- 2. Performance Intelligence (Visual: LEFT) -->
-<div class="split-section split-alt">
-  <div class="container">
-    <div class="split-inner">
-      <div class="split-content">
-        <span class="eyebrow">Performance Intelligence</span>
-        <h2 class="split-title">Per-platform metrics. Instant cause analysis.</h2>
-        <p class="split-body">Track Meta, Google, and marketplace performance independently. When metrics shift, Maradar pinpoints the underlying triggers.</p>
-        <div class="split-actions">
-          <a href="#" class="btn btn-primary">Get started →</a>
-          <a href="#contact" style="font-size:14px;font-weight:600;color:var(--blue);">Schedule demo →</a>
-        </div>
-      </div>
-      <div class="split-img">
-        <div style="background:#fff;border-radius:var(--r-xl, 20px);padding:24px;border:1.5px solid var(--grey-100, #E2E8F0);box-shadow:0 20px 40px -15px rgba(15, 23, 42, 0.07);">
-          <!-- Card Header -->
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
-            <h3 style="font-size:15px;font-weight:700;color:var(--grey-700, #475569);margin:0;">ROAS by platform — 30-day trend</h3>
-            <button type="button" style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;color:var(--blue, #2563EB);font-size:12px;font-weight:600;cursor:pointer;">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
-              <span>✦ Investigate</span>
-            </button>
+
+    <!-- Steps Stack -->
+    <div class="workflow-steps" style="display:flex; flex-direction:column; gap:100px;">
+
+      <!-- 01 CONNECT -->
+      <div class="workflow-step" style="display:grid; grid-template-columns: 1fr 1fr; gap:60px; align-items:center;">
+        <div class="step-content">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+            <span style="font-size:32px; font-weight:800; color:#2563EB; letter-spacing:-0.03em;">01</span>
+            <div style="height:2px; width:40px; background:#2563EB;"></div>
           </div>
-
-          <!-- Chart Area -->
-          <div style="display:flex;gap:12px;height:180px;position:relative;">
-            <!-- Y-Axis -->
-            <div style="display:flex;flex-direction:column;justify-content:space-between;font-size:11px;font-weight:500;color:var(--grey-400, #94A3B8);text-align:right;width:28px;user-select:none;">
-              <span>4.5x</span>
-              <span>4x</span>
-              <span>3.5x</span>
-              <span>3x</span>
-              <span>2.5x</span>
-              <span>2x</span>
-              <span>1.5x</span>
-            </div>
-
-            <!-- Plot Area -->
-            <div style="flex:1;position:relative;height:100%;">
-              <!-- Grid Lines -->
-              <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;">
-                <div style="width:100%;height:1px;background:#F1F5F9;"></div>
-                <div style="width:100%;height:1px;background:#F1F5F9;"></div>
-                <div style="width:100%;height:1px;background:#F1F5F9;"></div>
-                <div style="width:100%;height:1px;background:#F1F5F9;"></div>
-                <div style="width:100%;height:1px;background:#F1F5F9;"></div>
-                <div style="width:100%;height:1px;background:#F1F5F9;"></div>
-                <div style="width:100%;height:1px;background:#F1F5F9;"></div>
+          <h3 style="font-size:32px; font-weight:700; color:#0F172A; margin:0 0 16px 0; letter-spacing:-0.02em;">Connect</h3>
+          <p style="font-size:16px; line-height:1.65; color:#475569; margin:0 0 24px 0;">
+            Unify your ad ecosystem instantly. Connect Meta and Google accounts to aggregate performance streams into a single source of truth—no engineering required.
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Meta Ads Sync</span>
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Google Ads Integration</span>
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Real-Time Data Ingestion</span>
+          </div>
+        </div>
+        <!-- Mock UI Card 01 -->
+        <div class="step-visual" style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:20px; padding:32px; box-shadow:0 20px 40px -15px rgba(0,0,0,0.05);">
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#F8FAFC; border:1px solid #F1F5F9; border-radius:12px;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:10px; height:10px; border-radius:50%; background:#10B981;"></div>
+                <span style="font-size:14px; font-weight:600; color:#1E293B;">Meta Ads Account</span>
               </div>
-
-              <!-- Lines SVG -->
-              <svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible;" viewBox="0 0 500 180" preserveAspectRatio="none">
-                <!-- Meta Line (Solid Blue) -->
-                <path d="M 0,110 C 80,95 120,95 180,120 C 240,140 280,100 360,80 C 420,65 460,55 500,45" fill="none" stroke="var(--blue, #2563EB)" stroke-width="2.5" stroke-linecap="round" />
-                <!-- Google Line (Dashed Amber) -->
-                <path d="M 0,140 C 90,146 160,142 220,136 C 280,130 350,150 420,146 C 460,144 480,144 500,144" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-dasharray="5 4" stroke-linecap="round" />
-              </svg>
+              <span style="font-size:12px; font-weight:600; color:#10B981; background:#ECFDF5; padding:4px 8px; border-radius:6px;">Connected</span>
             </div>
-          </div>
-
-          <!-- X-Axis -->
-          <div style="display:flex;justify-content:space-between;margin-left:40px;margin-top:10px;font-size:12px;font-weight:500;color:var(--grey-600, #64748B);">
-            <span>Jan</span>
-            <span>Feb</span>
-            <span>Mar</span>
-            <span>Apr</span>
-            <span>May</span>
-            <span>Jun</span>
-          </div>
-
-          <!-- Legend -->
-          <div style="display:flex;justify-content:center;align-items:center;gap:20px;margin-top:20px;">
-            <div style="display:flex;align-items:center;gap:6px;">
-              <span style="width:12px;height:12px;background:#EFF6FF;border:2px solid var(--blue, #2563EB);border-radius:2px;box-sizing:border-box;"></span>
-              <span style="font-size:12px;font-weight:600;color:var(--grey-700, #475569);">Meta</span>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#F8FAFC; border:1px solid #F1F5F9; border-radius:12px;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:10px; height:10px; border-radius:50%; background:#10B981;"></div>
+                <span style="font-size:14px; font-weight:600; color:#1E293B;">Google Ads Manager</span>
+              </div>
+              <span style="font-size:12px; font-weight:600; color:#10B981; background:#ECFDF5; padding:4px 8px; border-radius:6px;">Connected</span>
             </div>
-            <div style="display:flex;align-items:center;gap:6px;">
-              <span style="width:12px;height:12px;background:#FEF3C7;border:2px dashed #F59E0B;border-radius:2px;box-sizing:border-box;"></span>
-              <span style="font-size:12px;font-weight:600;color:var(--grey-700, #475569);">Google</span>
+            <div style="margin-top:8px; padding:16px; background:#F1F5F9; border-radius:12px; text-align:center;">
+              <span style="font-size:13px; color:#64748B; font-weight:500;">✓ 100% Data Streams Harmonized</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- 3. Creative Intelligence (Visual: RIGHT) -->
-<div class="split-section">
-  <div class="container">
-    <div class="split-inner">
-      <div class="split-content">
-        <span class="eyebrow">Creative Intelligence</span>
-        <h2 class="split-title">Know which creative approach wins, and why.</h2>
-        <p class="split-body">Maradar isolates the ad elements driving your results: Hook, angle, format, production, and talent, using your brand's data, not general benchmarks.</p>
-        <div class="split-actions">
-          <a href="#" class="btn btn-primary">Get started →</a>
-          <a href="#contact" style="font-size:14px;font-weight:600;color:var(--blue);">Schedule demo →</a>
+      <!-- 02 ANALYZE -->
+      <div class="workflow-step" style="display:grid; grid-template-columns: 1fr 1fr; gap:60px; align-items:center;">
+        <!-- Mock UI Card 02 (Left) -->
+        <div class="step-visual" style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:20px; padding:32px; box-shadow:0 20px 40px -15px rgba(0,0,0,0.05); order: 1;">
+          <div style="border-bottom:1px solid #F1F5F9; padding-bottom:16px; margin-bottom:16px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:14px; font-weight:700; color:#0F172A;">Ask-Maradar Analysis</span>
+            <span style="font-size:11px; background:#EFF6FF; color:#2563EB; font-weight:700; padding:4px 8px; border-radius:4px;">AI Active</span>
           </div>
-      </div>
-      <div class="split-img">
-        <div class="creative-chart reveal">
-        <div class="chart-group-label">Hook</div>
-        <div class="bar-row"><span class="bar-label">Urgency</span><div class="bar-track"><div class="bar-fill" style="width:84%"></div></div></div>
-        <div class="bar-row"><span class="bar-label">Bold Claim</span><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div></div>
-        <div class="bar-row"><span class="bar-label">Social Proof</span><div class="bar-track"><div class="bar-fill" style="width:66%"></div></div></div>
-        <div class="bar-row"><span class="bar-label">Pattern Interrupt</span><div class="bar-track"><div class="bar-fill" style="width:55%"></div></div></div>
-        <div class="bar-row"><span class="bar-label">Sound</span><div class="bar-track"><div class="bar-fill" style="width:42%"></div></div></div>
-        <div style="margin-top:18px;" class="chart-group-label">Emotional Appeal</div>
-        <div class="bar-row"><span class="bar-label">Security</span><div class="bar-track"><div class="bar-fill" style="width:96%;background:var(--blue)"></div></div></div>
-        <div class="bar-row"><span class="bar-label">Confidence</span><div class="bar-track"><div class="bar-fill" style="width:88%;background:var(--blue)"></div></div></div>
-        <div class="bar-row"><span class="bar-label">Aspirational</span><div class="bar-track"><div class="bar-fill" style="width:78%;background:var(--blue)"></div></div></div>
-        <div class="bar-row"><span class="bar-label">Belonging</span><div class="bar-track"><div class="bar-fill" style="width:68%;background:var(--blue)"></div></div></div>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 4. Competitor Intelligence (Visual: LEFT) -->
-<div class="split-section split-alt">
-  <div class="container">
-    <div class="split-inner">
-      <div class="split-content">
-        <span class="eyebrow">Competitor Intelligence</span>
-        <h2 class="split-title">Spot competitor moves before they scale.</h2>
-        <p class="split-body">Track rival creative shifts, ad volume surges, and emerging messaging hooks in real time. Maradar alerts you to market gaps so you can out-maneuver competing brands.</p>
-        <div class="split-actions">
-          <a href="#" class="btn btn-primary">Start free today. →</a>
-          <a href="#contact" style="font-size:14px;font-weight:600;color:var(--blue);">Schedule demo →</a>
+          <div style="font-size:13px; line-height:1.6; color:#334155; background:#F8FAFC; padding:16px; border-radius:12px; border-left:4px solid #2563EB;">
+            <strong>Synthesis:</strong> Meta campaign ROAS increased +28% driven by high-performing video hooks, while Google Search impression share dropped 8% due to competitor budget increases.
+          </div>
         </div>
-      </div>
-      <div class="split-img">
-        <div style="background:var(--off-white);border-radius:var(--r-xl);padding:28px;border:1.5px solid var(--grey-100);">
-          <div style="font-family:var(--font-body);font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-400);margin-bottom:16px;">Competitor Creative Winning Factors</div>
-          
-          <div style="margin-bottom:18px;">
-            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--grey-600);margin-bottom:6px;">
-              <span>Hook</span>
-              <span style="color:var(--blue);font-weight:700;">42%</span>
-            </div>
-            <div style="height:8px;background:var(--grey-100);border-radius:4px;overflow:hidden;">
-              <div style="width:42%;height:100%;background:var(--blue);border-radius:4px;"></div>
-            </div>
+        <div class="step-content" style="order: 2;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+            <span style="font-size:32px; font-weight:800; color:#2563EB; letter-spacing:-0.03em;">02</span>
+            <div style="height:2px; width:40px; background:#2563EB;"></div>
           </div>
-
-          <div style="margin-bottom:18px;">
-            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--grey-600);margin-bottom:6px;">
-              <span>Storry Telling</span>
-              <span>28%</span>
-            </div>
-            <div style="height:8px;background:var(--grey-100);border-radius:4px;overflow:hidden;">
-              <div style="width:28%;height:100%;background:#94a3b8;border-radius:4px;"></div>
-            </div>
-          </div>
-
-          <div style="padding:12px 14px;background:#fff;border:1px solid var(--grey-100);border-radius:var(--r-md);margin-top:16px;">
-            <div style="font-size:11px;font-weight:700;color:#e11d48;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Competitor Alert</div>
-            <div style="font-size:12px;color:var(--grey-700);line-height:1.5;">Competitor A extended campaign duration for 'Clinical Trial Results' video hooks in HK for 2 more weeks.</div>
+          <h3 style="font-size:32px; font-weight:700; color:#0F172A; margin:0 0 16px 0; letter-spacing:-0.02em;">Analyze</h3>
+          <p style="font-size:16px; line-height:1.65; color:#475569; margin:0 0 24px 0;">
+            Synthesize cross-platform intelligence in one place. Ask-Maradar cross-examines live performance data, creative retention signals, and competitor ad movements to pinpoint true cause-and-effect.
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Cross-Channel Synthesis</span>
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Ask-Maradar Engine</span>
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Multi-Variable Intelligence</span>
           </div>
         </div>
       </div>
+
+      <!-- 03 ACT -->
+      <div class="workflow-step" style="display:grid; grid-template-columns: 1fr 1fr; gap:60px; align-items:center;">
+        <div class="step-content">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+            <span style="font-size:32px; font-weight:800; color:#2563EB; letter-spacing:-0.03em;">03</span>
+            <div style="height:2px; width:40px; background:#2563EB;"></div>
+          </div>
+          <h3 style="font-size:32px; font-weight:700; color:#0F172A; margin:0 0 16px 0; letter-spacing:-0.02em;">Act</h3>
+          <p style="font-size:16px; line-height:1.65; color:#475569; margin:0 0 24px 0;">
+            Convert intelligence into immediate team execution. Generate actionable creative briefs, production angles, and media buying recommendations directly through intuitive Ask-Maradar prompt workflows.
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Instant Brief Generation</span>
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Strategic Recommendations</span>
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Media Directions</span>
+          </div>
+        </div>
+        <!-- Mock UI Card 03 -->
+        <div class="step-visual" style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:20px; padding:32px; box-shadow:0 20px 40px -15px rgba(0,0,0,0.05);">
+          <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <span style="font-size:13px; font-weight:700; color:#0F172A;">📋 Generated Creative Brief #204</span>
+              <button style="background:#2563EB; color:#FFFFFF; border:none; padding:4px 10px; border-radius:6px; font-size:11px; font-weight:600;">Export Brief</button>
+            </div>
+            <ul style="margin:0; padding-left:18px; font-size:12px; color:#475569; line-height:1.6;">
+              <li><strong>Target Angle:</strong> Clinical proof comparison vs rival claims.</li>
+              <li><strong>Hook Direction:</strong> "3 reasons why standard treatments fail."</li>
+              <li><strong>Recommended Budget:</strong> Reallocate +$1,500/wk to Ad Set 02.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 DEEP-DIVE -->
+      <div class="workflow-step" style="display:grid; grid-template-columns: 1fr 1fr; gap:60px; align-items:center;">
+        <!-- Mock UI Card 04 (Left) -->
+        <div class="step-visual" style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:20px; padding:32px; box-shadow:0 20px 40px -15px rgba(0,0,0,0.05); order: 1;">
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:600; margin-bottom:6px;">
+                <span>Hook Impact Rate (Winning Factors)</span>
+                <span style="color:#2563EB;">42% Contribution</span>
+              </div>
+              <div style="height:8px; background:#F1F5F9; border-radius:4px; overflow:hidden;">
+                <div style="width:42%; height:100%; background:#2563EB; border-radius:4px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:600; margin-bottom:6px;">
+                <span>Social Proof Messaging</span>
+                <span style="color:#2563EB;">28% Contribution</span>
+              </div>
+              <div style="height:8px; background:#F1F5F9; border-radius:4px; overflow:hidden;">
+                <div style="width:28%; height:100%; background:#3B82F6; border-radius:4px;"></div>
+              </div>
+            </div>
+            <div style="background:#FEF2F2; border:1px solid #FEE2E2; border-radius:8px; padding:10px 12px; font-size:11px; color:#991B1B;">
+              <strong>Competitor Alert:</strong> Competitor A extended 'Clinical Trial' video ad duration in HK for 2 more weeks.
+            </div>
+          </div>
+        </div>
+        <div class="step-content" style="order: 2;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+            <span style="font-size:32px; font-weight:800; color:#2563EB; letter-spacing:-0.03em;">04</span>
+            <div style="height:2px; width:40px; background:#2563EB;"></div>
+          </div>
+          <h3 style="font-size:32px; font-weight:700; color:#0F172A; margin:0 0 16px 0; letter-spacing:-0.02em;">Deep-Dive</h3>
+          <p style="font-size:16px; line-height:1.65; color:#475569; margin:0 0 24px 0;">
+            Uncover key <strong>winning factors</strong> with dedicated diagnostic suites. Drill into performance metrics, creative element breakdowns (hooks, angles, visual pacing), and competitor intelligence separately whenever you need granular proof.
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Winning Factors Isolation</span>
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Creative Diagnostics</span>
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Competitor Radar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 OPTIMIZE -->
+      <div class="workflow-step" style="display:grid; grid-template-columns: 1fr 1fr; gap:60px; align-items:center;">
+        <div class="step-content">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+            <span style="font-size:32px; font-weight:800; color:#2563EB; letter-spacing:-0.03em;">05</span>
+            <div style="height:2px; width:40px; background:#2563EB;"></div>
+          </div>
+          <h3 style="font-size:32px; font-weight:700; color:#0F172A; margin:0 0 16px 0; letter-spacing:-0.02em;">Optimize</h3>
+          <p style="font-size:16px; line-height:1.65; color:#475569; margin:0 0 24px 0;">
+            <strong>Scale</strong> campaigns and optimize creative at speed. Instantly replace fatigued hooks, deploy winning angles, and shift budget to top-performing assets to keep ROAS compounding efficiently.
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Rapid Scale Engine</span>
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">Hook Swapping</span>
+            <span style="background:#EFF6FF; color:#1D4ED8; font-size:12px; font-weight:600; padding:6px 12px; border-radius:16px;">ROAS Scaling</span>
+          </div>
+        </div>
+        <!-- Mock UI Card 05 -->
+        <div class="step-visual" style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:20px; padding:32px; box-shadow:0 20px 40px -15px rgba(0,0,0,0.05);">
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:#F0FDF4; border:1px solid #DCFCE7; border-radius:10px;">
+              <span style="font-size:13px; font-weight:600; color:#166534;">⚡ Creative Hook Refreshed</span>
+              <span style="font-size:12px; font-weight:700; color:#15803D;">ROAS +34%</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:#F0FDF4; border:1px solid #DCFCE7; border-radius:10px;">
+              <span style="font-size:13px; font-weight:600; color:#166534;">🚀 Campaign Scale Active</span>
+              <span style="font-size:12px; font-weight:700; color:#15803D;">Budget +50%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
-  
 </section>
         
 <!-- ASK-MARADAR -->
