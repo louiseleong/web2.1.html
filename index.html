@@ -500,10 +500,10 @@
     .legend-dot { width:28px; height:3px; border-radius:2px; }
 
     /* — Feautures - Workflow & Action Section — */
-    /* — Workflow & Action Section — */
+   /* — Workflow & Action Section — */
 .workflow-section { padding: 90px 0; background-color: var(--off-white, #FAFAFC); }
-.workflow-header { text-align: center; max-width: 720px; margin: 0 auto 80px auto; }
-.workflow-steps { display: flex; flex-direction: column; gap: 80px; }
+.workflow-header { text-align: center; max-width: 800px; margin: 0 auto 80px auto; }
+.workflow-steps { display: flex; flex-direction: column; gap: 88px; }
 
 /* Grid Layout */
 .workflow-step { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
@@ -512,20 +512,20 @@
 .step-col-visual { flex: 1 0 520px; max-width: 520px; }
 
 /* Step Number Badge */
-.step-number-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-.step-number { font-size: 32px; font-weight: 800; color: #2563EB; letter-spacing: -0.03em; }
-.step-line { height: 2px; width: 40px; background-color: #2563EB; }
+.step-number-wrap { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.step-number { font-size: 38px; font-weight: 800; color: #2563EB; letter-spacing: -0.03em; }
+.step-line { height: 2px; width: 44px; background-color: #2563EB; }
 
-/* Text Content - Aligned with Maradar Typography System */
-.step-title { font-family: var(--font-display, inherit); font-size: clamp(24px, 3vw, 34px); font-weight: 700; line-height: 1.2; color: var(--ink, #0F172A); margin-bottom: 16px; letter-spacing: -0.01em; }
-.step-desc { font-size: 15px; font-weight: 400; line-height: 1.7; color: var(--grey-600, #475569); margin-bottom: 24px; }
+/* Text Content - Bumped Sizes */
+.step-title { font-family: var(--font-display, inherit); font-size: clamp(30px, 3.5vw, 42px); font-weight: 700; line-height: 1.18; color: var(--ink, #0F172A); margin-bottom: 18px; letter-spacing: -0.01em; }
+.step-desc { font-size: 18px; font-weight: 400; line-height: 1.65; color: var(--grey-600, #334155); margin-bottom: 28px; }
 
-/* Feature Pills - Clean Unbolded Tags */
-.step-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-.step-pill { background-color: #EFF6FF; color: #1D4ED8; font-size: 12px; font-weight: 500; padding: 6px 12px; border-radius: 16px; }
+/* Feature Pills - Scaled Up */
+.step-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+.step-pill { background-color: #EFF6FF; color: #1D4ED8; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 20px; }
 
 /* Visual Mock Card Container */
-.step-visual-card { background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--r-xl, 20px); padding: 24px; box-shadow: var(--shadow-lg, 0 20px 40px -15px rgba(15, 23, 42, 0.05)); }
+.step-visual-card { background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--r-xl, 20px); padding: 28px; box-shadow: var(--shadow-lg, 0 20px 40px -15px rgba(15, 23, 42, 0.05)); }
 
 /* Legacy Feature Compatibility */
 .feature-section { padding: 90px 0; }
@@ -537,9 +537,9 @@
 .feature-col-visual { flex: 1 0 520px; max-width: 520px; }
 
 /* Checklist Items */
-.feature-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
-.feature-checklist li { font-size: 13px; font-weight: 400; color: #475569; display: flex; align-items: center; gap: 8px; }
-.feature-checklist li::before { content: ''; width: 14px; height: 14px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310B981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat; }
+.feature-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.feature-checklist li { font-size: 15px; font-weight: 400; color: #334155; display: flex; align-items: center; gap: 10px; }
+.feature-checklist li::before { content: ''; width: 16px; height: 16px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310B981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat; }
 
 /* Dot Color Indicators */
 .dot-red { background-color: #EF4444; }
@@ -551,7 +551,8 @@
 @media (max-width: 900px) {
   .workflow-step, .workflow-step.reverse, .feature-row, .feature-row.reverse { flex-direction: column; gap: 40px; text-align: left; }
   .step-col-text, .step-col-visual, .feature-col-text, .feature-col-visual { max-width: 100%; width: 100%; flex: 1 1 auto; }
-  .step-title, .feature-title { font-size: 28px; }
+  .step-title, .feature-title { font-size: 32px; }
+  .step-desc { font-size: 16px; }
 }
 
      /* Ask Maradar Section */
@@ -1852,9 +1853,9 @@
     
     <!-- Section Header -->
     <div class="workflow-header">
-      <span class="eyebrow" style="display:block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#64748B; margin-bottom:12px;">ACTION-ORIENTED WORKFLOW</span>
-      <h2 style="font-family:var(--font-display, inherit); font-size:clamp(28px, 3.5vw, 42px); font-weight:700; line-height:1.15; color:var(--ink, #0F172A); margin:0 0 16px 0; letter-spacing:-0.02em;">One Platform, Complete Workflow</h2>
-      <p style="font-size:15px; font-weight:400; line-height:1.7; color:var(--grey-600, #475569); margin:0;">From data stream integration to automated brief generation and continuous optimization, execute your marketing growth strategy in 5 connected steps.</p>
+      <span class="eyebrow" style="display:block; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#64748B; margin-bottom:12px;">ACTION-ORIENTED WORKFLOW</span>
+      <h2 style="font-family:var(--font-display, inherit); font-size:clamp(32px, 4vw, 46px); font-weight:700; line-height:1.15; color:var(--ink, #0F172A); margin:0 0 18px 0; letter-spacing:-0.02em;">One Platform, Complete Workflow</h2>
+      <p style="font-size:18px; font-weight:400; line-height:1.65; color:var(--grey-600, #475569); margin:0;">From data stream integration to automated brief generation and continuous optimization, execute your marketing growth strategy in 5 connected steps.</p>
     </div>
 
     <div class="workflow-steps">
@@ -1878,35 +1879,35 @@
         </div>
         <div class="step-col-visual">
           <div class="step-visual-card">
-            <!-- Detailed API Stream Control Panel -->
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #E2E8F0; padding-bottom:12px; margin-bottom:16px;">
-              <span style="font-size:12px; font-weight:700; color:#0F172A; letter-spacing:0.05em; text-transform:uppercase;">Connected Integrations</span>
-              <span style="font-size:11px; font-weight:500; color:#10B981; background:#ECFDF5; padding:3.5px 8px; border-radius:12px; display:flex; align-items:center; gap:6px;">
+            <!-- API Stream Control Panel -->
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #E2E8F0; padding-bottom:14px; margin-bottom:18px;">
+              <span style="font-size:13px; font-weight:700; color:#0F172A; letter-spacing:0.05em; text-transform:uppercase;">Connected Integrations</span>
+              <span style="font-size:13px; font-weight:500; color:#10B981; background:#ECFDF5; padding:4px 10px; border-radius:12px; display:flex; align-items:center; gap:6px;">
                 <span class="status-dot dot-green"></span> Live Stream Sync
               </span>
             </div>
-            <div style="display:flex; flex-direction:column; gap:12px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px;">
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px;">
                 <div style="display:flex; align-items:center; gap:12px;">
-                  <div style="width:28px; height:28px; background:#EFF6FF; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#2563EB; font-weight:700; font-size:12px;">f</div>
+                  <div style="width:32px; height:32px; background:#EFF6FF; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#2563EB; font-weight:700; font-size:15px;">f</div>
                   <div>
-                    <div style="font-size:13px; font-weight:600; color:#0F172A;">Meta Business Manager</div>
-                    <div style="font-size:11px; font-weight:400; color:#64748B;">Account ID: 8492-3021 • Active</div>
+                    <div style="font-size:15px; font-weight:600; color:#0F172A;">Meta Business Manager</div>
+                    <div style="font-size:13px; font-weight:400; color:#64748B;">Account ID: 8492-3021 • Active</div>
                   </div>
                 </div>
-                <span style="font-size:11px; font-weight:500; color:#475569;">1,420 Ads Processed</span>
+                <span style="font-size:13px; font-weight:500; color:#475569;">1,420 Ads Processed</span>
               </div>
-              <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px;">
                 <div style="display:flex; align-items:center; gap:12px;">
-                  <div style="width:28px; height:28px; background:#FEF3C7; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#D97706; font-weight:700; font-size:12px;">G</div>
+                  <div style="width:32px; height:32px; background:#FEF3C7; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#D97706; font-weight:700; font-size:15px;">G</div>
                   <div>
-                    <div style="font-size:13px; font-weight:600; color:#0F172A;">Google Ads MCC</div>
-                    <div style="font-size:11px; font-weight:400; color:#64748B;">Account ID: 104-928-110 • Active</div>
+                    <div style="font-size:15px; font-weight:600; color:#0F172A;">Google Ads MCC</div>
+                    <div style="font-size:13px; font-weight:400; color:#64748B;">Account ID: 104-928-110 • Active</div>
                   </div>
                 </div>
-                <span style="font-size:11px; font-weight:500; color:#475569;">890 Ads Processed</span>
+                <span style="font-size:13px; font-weight:500; color:#475569;">890 Ads Processed</span>
               </div>
-              <div style="padding:10px 14px; background:#EFF6FF; border:1px solid #DBEAFE; border-radius:10px; font-size:12px; font-weight:400; color:#1E40AF; display:flex; justify-content:space-between;">
+              <div style="padding:12px 16px; background:#EFF6FF; border:1px solid #DBEAFE; border-radius:10px; font-size:14px; font-weight:400; color:#1E40AF; display:flex; justify-content:space-between;">
                 <span>Data Harmonization Engine</span>
                 <span style="font-weight:600;">100% Synced</span>
               </div>
@@ -1935,22 +1936,22 @@
         <div class="step-col-visual">
           <div class="step-visual-card">
             <!-- Synthesis Cockpit Component -->
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-              <span style="font-size:13px; font-weight:700; color:#0F172A;">Ask-Maradar Intelligence Synthesis</span>
-              <span style="font-size:11px; font-weight:500; color:#2563EB; background:#EFF6FF; padding:3px 8px; border-radius:6px;">Live Core Analysis</span>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+              <span style="font-size:15px; font-weight:700; color:#0F172A;">Ask-Maradar Intelligence Synthesis</span>
+              <span style="font-size:12px; font-weight:500; color:#2563EB; background:#EFF6FF; padding:4px 10px; border-radius:6px;">Live Core Analysis</span>
             </div>
-            <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:16px; margin-bottom:12px;">
-              <div style="font-size:12px; font-weight:400; color:#334155; line-height:1.6; margin-bottom:10px;">
+            <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px; margin-bottom:12px;">
+              <div style="font-size:15px; font-weight:400; color:#334155; line-height:1.6; margin-bottom:14px;">
                 "Meta ROAS increased <span style="color:#10B981; font-weight:600;">+28%</span> over 14 days following UGC hook refresh, while Google Search impression share declined <span style="color:#EF4444; font-weight:600;">-8%</span> as Competitor A launched aggressive brand keyword bidding."
               </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-                <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:8px 10px; border-radius:8px;">
-                  <div style="font-size:10px; font-weight:500; color:#64748B;">Meta ROAS Driver</div>
-                  <div style="font-size:13px; font-weight:600; color:#0F172A;">Clinical Hook #4</div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:10px 12px; border-radius:8px;">
+                  <div style="font-size:12px; font-weight:500; color:#64748B;">Meta ROAS Driver</div>
+                  <div style="font-size:14px; font-weight:600; color:#0F172A;">Clinical Hook #4</div>
                 </div>
-                <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:8px 10px; border-radius:8px;">
-                  <div style="font-size:10px; font-weight:500; color:#64748B;">Rival Threat Level</div>
-                  <div style="font-size:13px; font-weight:600; color:#D97706;">Moderate Spend Rise</div>
+                <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:10px 12px; border-radius:8px;">
+                  <div style="font-size:12px; font-weight:500; color:#64748B;">Rival Threat Level</div>
+                  <div style="font-size:14px; font-weight:600; color:#D97706;">Moderate Spend Rise</div>
                 </div>
               </div>
             </div>
@@ -1977,23 +1978,23 @@
         </div>
         <div class="step-col-visual">
           <div class="step-visual-card">
-            <!-- Comprehensive Briefing Action Card -->
-            <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:16px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid #E2E8F0; padding-bottom:10px;">
+            <!-- Briefing Action Card -->
+            <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid #E2E8F0; padding-bottom:12px;">
                 <div>
-                  <span style="font-size:11px; font-weight:700; color:#2563EB; letter-spacing:0.05em; text-transform:uppercase;">Briefing Engine</span>
-                  <div style="font-size:13px; font-weight:700; color:#0F172A;">Generated Creative Brief #402</div>
+                  <span style="font-size:12px; font-weight:700; color:#2563EB; letter-spacing:0.05em; text-transform:uppercase;">Briefing Engine</span>
+                  <div style="font-size:15px; font-weight:700; color:#0F172A;">Generated Creative Brief #402</div>
                 </div>
-                <button type="button" style="background:#2563EB; color:#FFFFFF; border:none; padding:6px 12px; border-radius:8px; font-size:11px; font-weight:500; cursor:pointer;">Export Brief</button>
+                <button type="button" style="background:#2563EB; color:#FFFFFF; border:none; padding:8px 14px; border-radius:8px; font-size:13px; font-weight:500; cursor:pointer;">Export Brief</button>
               </div>
-              <div style="display:flex; flex-direction:column; gap:8px; font-size:12px; font-weight:400; color:#475569; line-height:1.5;">
-                <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:8px 12px; border-radius:8px;">
+              <div style="display:flex; flex-direction:column; gap:10px; font-size:14px; font-weight:400; color:#475569; line-height:1.5;">
+                <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:10px 14px; border-radius:8px;">
                   <strong style="color:#0F172A; font-weight:600;">Objective Angle:</strong> Capture competitor anti-aging trial share via proof claims.
                 </div>
-                <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:8px 12px; border-radius:8px;">
+                <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:10px 14px; border-radius:8px;">
                   <strong style="color:#0F172A; font-weight:600;">Winning Hook Concept:</strong> "Stop standard serums until you see clinical trial data."
                 </div>
-                <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:8px 12px; border-radius:8px;">
+                <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:10px 14px; border-radius:8px;">
                   <strong style="color:#0F172A; font-weight:600;">Media Shift Direction:</strong> Reallocate +$1,200/week into Meta Ad Set 02.
                 </div>
               </div>
@@ -2022,31 +2023,31 @@
         <div class="step-col-visual">
           <div class="step-visual-card">
             <!-- Multi-Module Deep Dive Interface -->
-            <div style="display:flex; border-bottom:1px solid #E2E8F0; margin-bottom:16px; gap:16px;">
-              <span style="font-size:12px; font-weight:600; color:#2563EB; border-bottom:2px solid #2563EB; padding-bottom:8px;">Creative</span>
-              <span style="font-size:12px; font-weight:400; color:#64748B; padding-bottom:8px;">Performance</span>
-              <span style="font-size:12px; font-weight:400; color:#64748B; padding-bottom:8px;">Competitor</span>
+            <div style="display:flex; border-bottom:1px solid #E2E8F0; margin-bottom:18px; gap:20px;">
+              <span style="font-size:14px; font-weight:600; color:#2563EB; border-bottom:2px solid #2563EB; padding-bottom:10px;">Creative</span>
+              <span style="font-size:14px; font-weight:400; color:#64748B; padding-bottom:10px;">Performance</span>
+              <span style="font-size:14px; font-weight:400; color:#64748B; padding-bottom:10px;">Competitor</span>
             </div>
-            <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="display:flex; flex-direction:column; gap:14px;">
               <div>
-                <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:400; color:#475569; margin-bottom:6px;">
+                <div style="display:flex; justify-content:space-between; font-size:14px; font-weight:400; color:#475569; margin-bottom:8px;">
                   <span>Clinical Proof Hook</span>
                   <span style="color:#2563EB; font-weight:600;">42% Conversion Factor</span>
                 </div>
-                <div style="height:6px; background:#F1F5F9; border-radius:3px; overflow:hidden;">
+                <div style="height:8px; background:#F1F5F9; border-radius:4px; overflow:hidden;">
                   <div style="width:42%; height:100%; background:#2563EB;"></div>
                 </div>
               </div>
               <div>
-                <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:400; color:#475569; margin-bottom:6px;">
+                <div style="display:flex; justify-content:space-between; font-size:14px; font-weight:400; color:#475569; margin-bottom:8px;">
                   <span>Dermatologist Testimonial</span>
                   <span style="color:#2563EB; font-weight:600;">28% Conversion Factor</span>
                 </div>
-                <div style="height:6px; background:#F1F5F9; border-radius:3px; overflow:hidden;">
+                <div style="height:8px; background:#F1F5F9; border-radius:4px; overflow:hidden;">
                   <div style="width:28%; height:100%; background:#3B82F6;"></div>
                 </div>
               </div>
-              <div style="background:#FEF2F2; border:1px solid #FEE2E2; border-radius:8px; padding:10px 12px; font-size:11px; font-weight:400; color:#991B1B;">
+              <div style="background:#FEF2F2; border:1px solid #FEE2E2; border-radius:8px; padding:12px 14px; font-size:13px; font-weight:400; color:#991B1B;">
                 <strong style="font-weight:600;">Competitor Shift Detected:</strong> Rival brand extended campaign duration for 'Clinical Trial' angle in HK by 2 weeks.
               </div>
             </div>
@@ -2074,26 +2075,26 @@
         <div class="step-col-visual">
           <div class="step-visual-card">
             <!-- Closed Loop Scale Execution Control -->
-            <div style="display:flex; flex-direction:column; gap:12px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#F0FDF4; border:1px solid #DCFCE7; border-radius:12px;">
-                <div style="display:flex; align-items:center; gap:10px;">
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; background:#F0FDF4; border:1px solid #DCFCE7; border-radius:12px;">
+                <div style="display:flex; align-items:center; gap:12px;">
                   <span class="status-dot dot-green"></span>
                   <div>
-                    <div style="font-size:13px; font-weight:600; color:#166534;">Creative Hook Refreshed</div>
-                    <div style="font-size:11px; font-weight:400; color:#15803D;">Swapped fatigued Hook #2 with Clinical UGC</div>
+                    <div style="font-size:15px; font-weight:600; color:#166534;">Creative Hook Refreshed</div>
+                    <div style="font-size:13px; font-weight:400; color:#15803D;">Swapped fatigued Hook #2 with Clinical UGC</div>
                   </div>
                 </div>
-                <span style="font-size:12px; font-weight:600; color:#166534;">ROAS +34%</span>
+                <span style="font-size:14px; font-weight:600; color:#166534;">ROAS +34%</span>
               </div>
-              <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#F0FDF4; border:1px solid #DCFCE7; border-radius:12px;">
-                <div style="display:flex; align-items:center; gap:10px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; background:#F0FDF4; border:1px solid #DCFCE7; border-radius:12px;">
+                <div style="display:flex; align-items:center; gap:12px;">
                   <span class="status-dot dot-green"></span>
                   <div>
-                    <div style="font-size:13px; font-weight:600; color:#166534;">Campaign Scaling Active</div>
-                    <div style="font-size:11px; font-weight:400; color:#15803D;">Reallocated budget to high-converting ad set</div>
+                    <div style="font-size:15px; font-weight:600; color:#166534;">Campaign Scaling Active</div>
+                    <div style="font-size:13px; font-weight:400; color:#15803D;">Reallocated budget to high-converting ad set</div>
                   </div>
                 </div>
-                <span style="font-size:12px; font-weight:600; color:#166534;">Budget +50%</span>
+                <span style="font-size:14px; font-weight:600; color:#166534;">Budget +50%</span>
               </div>
             </div>
           </div>
