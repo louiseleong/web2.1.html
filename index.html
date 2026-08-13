@@ -694,7 +694,7 @@
     .fill-amber { background-color: #F59E0B; }
     .fill-purple { background-color: #8B5CF6; }
 
-    /* Workspace & Signals Section */
+      /* — Workflow & Action Section — */
     .workspace-section { padding: 80px 0; background-color: #F3F5F8; }
     .workspace-header { text-align: center; max-width: 680px; margin: 0 auto 48px; }
     .workspace-header h2 { font-size: 40px; line-height: 1.2; color: #0F172A; margin-bottom: 16px; font-weight: 700; }
@@ -717,62 +717,8 @@
     .theme-competitor .badge-tag, .theme-competitor .action-pill { background-color: #FEF3C7; color: #D97706; }
     .subtag-list { display: flex; gap: 6px; margin-top: 4px; }
     .subtag-item { font-size: 12px; font-weight: 600; color: #64748B; background-color: #F1F5F9; padding: 3px 10px; border-radius: 99px; }
-
-      /* — Workflow & Action Section — */
-.workflow-section { padding: 90px 0; background-color: var(--off-white, #FAFAFC); }
-.workflow-header { text-align: center; max-width: 800px; margin: 0 auto 80px auto; }
-.workflow-steps { display: flex; flex-direction: column; gap: 88px; }
-
-/* Grid Layout */
-.workflow-step { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
-.workflow-step.reverse { flex-direction: row-reverse; }
-.step-col-text { flex: 1 0 480px; max-width: 480px; }
-.step-col-visual { flex: 1 0 520px; max-width: 520px; }
-
-/* Step Number Badge */
-.step-number-wrap { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-.step-number { font-size: 38px; font-weight: 800; color: #2563EB; letter-spacing: -0.03em; }
-.step-line { height: 2px; width: 44px; background-color: #2563EB; }
-
-/* Text Content - Bumped Sizes */
-.step-title { font-family: var(--font-display, montserrat); font-size: clamp(48px, 3.5vw, 42px); font-weight: 700; line-height: 1.18; color: var(--ink, #0F172A); margin-bottom: 18px; letter-spacing: -0.01em; }
-.step-desc { font-size: 24px; font-weight: 400 !Important; line-height: 1.65; color: var(--grey-400, #334155); margin-bottom: 28px; }
-
-/* Feature Pills - Scaled Up */
-.step-pills { display: flex; flex-wrap: wrap; gap: 10px; }
-.step-pill { background-color: #EFF6FF; color: #1D4ED8; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 20px; }
-
-/* Visual Mock Card Container */
-.step-visual-card { background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--r-xl, 20px); padding: 28px; box-shadow: var(--shadow-lg, 0 20px 40px -15px rgba(15, 23, 42, 0.05)); }
-
-/* Legacy Feature Compatibility */
-.feature-section { padding: 90px 0; }
-.bg-white { background-color: #FFFFFF; }
-.bg-alt { background-color: #F4F6F9; }
-.feature-row { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
-.feature-row.reverse { flex-direction: row-reverse; }
-.feature-col-text { flex: 1 0 480px; max-width: 480px; }
-.feature-col-visual { flex: 1 0 520px; max-width: 520px; }
-
-/* Checklist Items */
-.feature-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
-.feature-checklist li { font-size: 15px; font-weight: 400; color: #334155; display: flex; align-items: center; gap: 10px; }
-.feature-checklist li::before { content: ''; width: 16px; height: 16px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310B981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat; }
-
-/* Dot Color Indicators */
-.dot-red { background-color: #EF4444; }
-.dot-amber { background-color: #F59E0B; }
-.dot-blue { background-color: #3B82F6; }
-.dot-green { background-color: #10B981; }
-
-/* Responsive */
-@media (max-width: 900px) {
-  .workflow-step, .workflow-step.reverse, .feature-row, .feature-row.reverse { flex-direction: column; gap: 40px; text-align: left; }
-  .step-col-text, .step-col-visual, .feature-col-text, .feature-col-visual { max-width: 100%; width: 100%; flex: 1 1 auto; }
-  .step-title, .feature-title { font-size: 32px; }
-  .step-desc { font-size: 16px; }
-}
-    /* Feature Rows & Briefing */
+        
+     /* Feature Rows & Briefing */
     .feature-section { padding: 90px 0; }
     .bg-white { background-color: #FFFFFF; }
     .bg-alt { background-color: #F4F6F9; }
