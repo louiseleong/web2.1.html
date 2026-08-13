@@ -516,8 +516,8 @@
 .step-line { height: 2px; width: 44px; background-color: #2563EB; }
 
 /* Text Content - Bumped Sizes */
-.step-title { font-family: var(--font-display, inherit); font-size: clamp(30px, 3.5vw, 42px); font-weight: 700; line-height: 1.18; color: var(--ink, #0F172A); margin-bottom: 18px; letter-spacing: -0.01em; }
-.step-desc { font-size: 18px; font-weight: 400; line-height: 1.65; color: var(--grey-600, #334155); margin-bottom: 28px; }
+.step-title { font-family: var(--font-display, montserrat); font-size: clamp(48px, 3.5vw, 42px); font-weight: 700; line-height: 1.18; color: var(--ink, #0F172A); margin-bottom: 18px; letter-spacing: -0.01em; }
+.step-desc { font-size: 24px; font-weight: 400 !Important; line-height: 1.65; color: var(--grey-400, #334155); margin-bottom: 28px; }
 
 /* Feature Pills - Scaled Up */
 .step-pills { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -553,7 +553,62 @@
   .step-title, .feature-title { font-size: 32px; }
   .step-desc { font-size: 16px; }
 }
+/* Feature Rows & Briefing */
+    .feature-section { padding: 90px 0; }
+    .bg-white { background-color: #FFFFFF; }
+    .bg-alt { background-color: #F4F6F9; }
+    .feature-row { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
+    .feature-row.reverse { flex-direction: row-reverse; }
+    .feature-col-text { flex: 1; max-width: 480px; }
+    .feature-col-visual { flex: 1; max-width: 520px; }
 
+    /* Split Section Alternating Layout Mapping */
+    .split-section { padding: 90px 0; }
+    .split-inner { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
+    .split-section.split-alt .split-inner { flex-direction: row-reverse; }
+    .split-content { flex: 1; max-width: 480px; }
+    .split-img { flex: 1; max-width: 520px; }
+
+    .feature-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #94A3B8; margin-bottom: 12px; }
+    .feature-title { font-size: 38px; font-weight: 700; line-height: 1.2; color: #0F172A; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .feature-desc { font-size: 18px; line-height: 1.6; font-weight: 400; color: #64748B; margin-bottom: 24px; }
+    .feature-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .feature-checklist li { font-size: 13px; font-weight: 600; color: #475569; display: flex; align-items: center; gap: 8px; }
+    .feature-checklist li::before { content: ''; width: 14px; height: 14px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310B981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat; }
+    .briefing-card-container { background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 24px; padding: 32px; box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.07); display: flex; flex-direction: column; gap: 12px; }
+    .briefing-header { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #94A3B8; margin-bottom: 8px; }
+    .briefing-pill { background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 14px 18px; font-size: 13px; font-weight: 600; color: #1E293B; line-height: 1.5; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02); }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+    .dot-red { background-color: #EF4444; }
+    .dot-amber { background-color: #F59E0B; }
+    .dot-blue { background-color: #3B82F6; }
+    .dot-green { background-color: #10B981; }
+    .feature-cta-group { display: flex; align-items: center; gap: 16px; margin-top: 24px; flex-wrap: wrap; }
+    .btn-link { font-size: 14px; font-weight: 600; color: #2563EB; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+    .btn-link:hover { text-decoration: underline; }
+    
+    /* Ask Maradar Section */
+    .ask-maradar-section { padding: 90px 20px; background-color: #000000; text-align: left; }
+    .ask-maradar-content { max-width: 480px; margin: 0; }
+    .ask-maradar-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #94A3B8; margin-bottom: 12px; }
+    .ask-maradar-title { font-size: 38px; font-weight: 700; line-height: 1.2; color: #FFFFFF; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .ask-maradar-desc { font-size: 15px; line-height: 1.6; font-weight: 400; color: #94A3B8; margin-bottom: 24px; }
+      
+    /* Responsive Rules */
+    @media (max-width: 900px) {
+    .dash-cards-grid { grid-template-columns: 1fr; }
+    .section-header h2, .workspace-header h2 { font-size: 32px; }
+    .feature-row, .feature-row.reverse { flex-direction: column; gap: 40px; text-align: left; }
+    .feature-col-text, .feature-col-visual { max-width: 100%; width: 100%; }
+     .feature-title { font-size: 30px; }
+    }
+    @media (max-width: 768px) {
+      .signal-row { flex-direction: column; align-items: flex-start; }
+      .ask-maradar-section { padding: 70px 20px; }
+      .ask-maradar-title { font-size: 44px; }
+      .ask-maradar-desc { font-size: 16px; }
+    }
+    
      /* Ask Maradar Section */
     .ask-maradar-section { padding: 90px 20px; background-color: #000000; text-align: left; }
     .ask-maradar-content { max-width: 480px; margin: 0; }
@@ -663,6 +718,60 @@
     .subtag-list { display: flex; gap: 6px; margin-top: 4px; }
     .subtag-item { font-size: 12px; font-weight: 600; color: #64748B; background-color: #F1F5F9; padding: 3px 10px; border-radius: 99px; }
 
+      /* — Workflow & Action Section — */
+.workflow-section { padding: 90px 0; background-color: var(--off-white, #FAFAFC); }
+.workflow-header { text-align: center; max-width: 800px; margin: 0 auto 80px auto; }
+.workflow-steps { display: flex; flex-direction: column; gap: 88px; }
+
+/* Grid Layout */
+.workflow-step { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
+.workflow-step.reverse { flex-direction: row-reverse; }
+.step-col-text { flex: 1 0 480px; max-width: 480px; }
+.step-col-visual { flex: 1 0 520px; max-width: 520px; }
+
+/* Step Number Badge */
+.step-number-wrap { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.step-number { font-size: 38px; font-weight: 800; color: #2563EB; letter-spacing: -0.03em; }
+.step-line { height: 2px; width: 44px; background-color: #2563EB; }
+
+/* Text Content - Bumped Sizes */
+.step-title { font-family: var(--font-display, montserrat); font-size: clamp(48px, 3.5vw, 42px); font-weight: 700; line-height: 1.18; color: var(--ink, #0F172A); margin-bottom: 18px; letter-spacing: -0.01em; }
+.step-desc { font-size: 24px; font-weight: 400 !Important; line-height: 1.65; color: var(--grey-400, #334155); margin-bottom: 28px; }
+
+/* Feature Pills - Scaled Up */
+.step-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+.step-pill { background-color: #EFF6FF; color: #1D4ED8; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 20px; }
+
+/* Visual Mock Card Container */
+.step-visual-card { background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--r-xl, 20px); padding: 28px; box-shadow: var(--shadow-lg, 0 20px 40px -15px rgba(15, 23, 42, 0.05)); }
+
+/* Legacy Feature Compatibility */
+.feature-section { padding: 90px 0; }
+.bg-white { background-color: #FFFFFF; }
+.bg-alt { background-color: #F4F6F9; }
+.feature-row { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
+.feature-row.reverse { flex-direction: row-reverse; }
+.feature-col-text { flex: 1 0 480px; max-width: 480px; }
+.feature-col-visual { flex: 1 0 520px; max-width: 520px; }
+
+/* Checklist Items */
+.feature-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.feature-checklist li { font-size: 15px; font-weight: 400; color: #334155; display: flex; align-items: center; gap: 10px; }
+.feature-checklist li::before { content: ''; width: 16px; height: 16px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310B981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat; }
+
+/* Dot Color Indicators */
+.dot-red { background-color: #EF4444; }
+.dot-amber { background-color: #F59E0B; }
+.dot-blue { background-color: #3B82F6; }
+.dot-green { background-color: #10B981; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .workflow-step, .workflow-step.reverse, .feature-row, .feature-row.reverse { flex-direction: column; gap: 40px; text-align: left; }
+  .step-col-text, .step-col-visual, .feature-col-text, .feature-col-visual { max-width: 100%; width: 100%; flex: 1 1 auto; }
+  .step-title, .feature-title { font-size: 32px; }
+  .step-desc { font-size: 16px; }
+}
     /* Feature Rows & Briefing */
     .feature-section { padding: 90px 0; }
     .bg-white { background-color: #FFFFFF; }
@@ -1868,7 +1977,7 @@
           </div>
           <h3 class="step-title">Connect</h3>
           <p class="step-desc">
-            Unify your ad ecosystem instantly. Connect Meta and Google accounts to aggregate performance streams into a single source of truth without manual spreadsheet data stitching.
+            Connect Meta and Google accounts to aggregate performance streams without manual spreadsheet data stitching.
           </p>
           <div class="step-pills">
             <span class="step-pill">Meta Ads API</span>
@@ -1907,7 +2016,7 @@
                 <span style="font-size:13px; font-weight:500; color:#475569;">890 Ads Processed</span>
               </div>
               <div style="padding:12px 16px; background:#EFF6FF; border:1px solid #DBEAFE; border-radius:10px; font-size:14px; font-weight:400; color:#1E40AF; display:flex; justify-content:space-between;">
-                <span>Data Harmonization Engine</span>
+                <span>Data Automation Engine</span>
                 <span style="font-weight:600;">100% Synced</span>
               </div>
             </div>
@@ -1924,7 +2033,7 @@
           </div>
           <h3 class="step-title">Analyze</h3>
           <p class="step-desc">
-            Synthesize cross-platform intelligence in one place. Ask-Maradar cross-examines campaign performance metrics, creative retention factors, and competitor ad spend to expose cause-and-effect instantly.
+            Ask-Maradar cross-examines campaign performance metrics, creative retention factors, and competitor ad spend to diagnose cause-and-effect instantly.
           </p>
           <div class="step-pills">
             <span class="step-pill">Ask-Maradar AI</span>
@@ -1967,7 +2076,7 @@
           </div>
           <h3 class="step-title">Act</h3>
           <p class="step-desc">
-            Convert real-time insights into execution. Instantly generate creative briefs, production angles, and media budget reallocation strategies directly through Ask-Maradar prompt workflows.
+            Instantly generate creative briefs, production angles, and media budget reallocation strategies directly through Ask-Maradar prompt workflows.
           </p>
           <div class="step-pills">
             <span class="step-pill">Automated Briefs</span>
@@ -2011,7 +2120,7 @@
           </div>
           <h3 class="step-title">Deep-Dive</h3>
           <p class="step-desc">
-            Isolate winning factors across dedicated diagnostic modules. Drill down into individual channel performance metrics, creative element breakdowns, and competitor intelligence separately when granular proof is required.
+            Drill down into individual channel performance metrics, creative winning factors, and competitor intelligence separately when granular proof is required.
           </p>
           <div class="step-pills">
             <span class="step-pill">Winning Factors Isolation</span>
@@ -2182,6 +2291,7 @@
 </div>
 
 <script>
+    
   document.addEventListener('DOMContentLoaded', () => {
     const chatForm = document.getElementById('chatForm');
     const chatInput = document.getElementById('chatInput');
@@ -2260,88 +2370,6 @@
     });
   });
 </script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const chatForm = document.getElementById('chatForm');
-    const chatInput = document.getElementById('chatInput');
-    const chatMessages = document.getElementById('chatMessages');
-    const welcomeScreen = document.getElementById('welcomeScreen');
-    const chatContainer = document.getElementById('chatContainer');
-    const resetChatBtn = document.getElementById('resetChatBtn');
-    const pillBtns = document.querySelectorAll('.pill-btn');
-
-    const mockResponses = {
-      creative: `<strong>🎨 Creative Intelligence Summary (Last 30 Days)</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Top Hook:</strong> "Clinical Trial Results" (3.8x ROAS, +42% CTR vs avg).</li><li><strong>Fatigue Warning:</strong> "Unboxing Reel v2" CTR declined 18% this week.</li><li><strong>Actionable Move:</strong> Swap Hook #2 in Meta Ad Set 04 with a UGC dermatologist testimonial angle.</li></ul>`,
-      competitor: `<strong>⚔️ Competitor Shift Alert</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Rival Action:</strong> Competitor A increased Meta ad spend by 35% in HK over the last 14 days.</li><li><strong>Winning Angle:</strong> Scaling a 3-step routine concept targeting anti-aging terms.</li><li><strong>Recommended Counter:</strong> Launch comparison ads highlighting clinical trial credentials.</li></ul>`,
-      performance: `<strong>📊 Cross-Platform Performance Pulse</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Combined Revenue:</strong> $15,793.68 (+25.6% MoM)</li><li><strong>Meta ROAS:</strong> 3.9x | <strong>Google ROAS:</strong> 2.8x</li><li><strong>Primary Driver:</strong> Meta Advantage+ campaign efficiency following creative refresh on June 12.</li></ul>`,
-      strategy: `<strong>🗺️ Strategic Diagnosis & Next Moves</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Opportunity:</strong> Google Search impression share dropped 12% on branded terms while competitors bidding surged.</li><li><strong>Budget Reallocation:</strong> Shift $1,200/week from low-ROAS retargeting into Meta winning video creative.</li></ul>`,
-      market: `<strong>🌐 Market Trend Radar</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Category Insight:</strong> Anti-aging search volume peaked (+28% MoM across HK & SG).</li><li><strong>Consumer Sentiment:</strong> High engagement on "dermatologist approved" and "ingredient breakdown" hooks.</li></ul>`,
-      brief: `<strong>📋 Generated Creative Brief #402</strong><ul style="margin:6px 0 0 0;padding-left:16px;"><li><strong>Objective:</strong> Capture rival anti-aging market share.</li><li><strong>Hook:</strong> "Stop using standard serums until you see clinical trial results."</li><li><strong>Format:</strong> 15s Split Screen UGC + Clinical Proof overlay.</li></ul>`,
-      default: `<strong>✦ Maradar Live Analysis</strong><br>Based on your live Meta and Google data, scaling creative angle <strong>"Clinical Proof"</strong> is projected to lower overall CAC by 14%. Generating tailored recommendations now...`
-    };
-
-    function appendMessage(text, isUser = false) {
-      if (welcomeScreen.style.display !== 'none') welcomeScreen.style.display = 'none';
-      const msg = document.createElement('div');
-      msg.style.cssText = `max-width:85%;padding:12px 16px;border-radius:14px;font-size:13px;line-height:1.5;${
-        isUser 
-          ? 'align-self:flex-end;background:#2563EB;color:#FFFFFF;border-bottom-right-radius:4px;' 
-          : 'align-self:flex-start;background:#FFFFFF;color:#1E293B;border:1px solid #E2E8F0;border-bottom-left-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.03);'
-      }`;
-      msg.innerHTML = text;
-      chatMessages.appendChild(msg);
-      chatContainer.scrollTop = chatContainer.scrollHeight;
-    }
-
-    function handleBotReply(query) {
-      const q = query.toLowerCase();
-      let key = 'default';
-      if (q.includes('creative')) key = 'creative';
-      else if (q.includes('compet') || q.includes('compete')) key = 'competitor';
-      else if (q.includes('perform') || q.includes('insight') || q.includes('summary')) key = 'performance';
-      else if (q.includes('strat')) key = 'strategy';
-      else if (q.includes('market') || q.includes('trend')) key = 'market';
-      else if (q.includes('brief')) key = 'brief';
-
-      const indicator = document.createElement('div');
-      indicator.id = 'typingIndicator';
-      indicator.style.cssText = 'align-self:flex-start;background:#FFFFFF;color:#64748B;border:1px solid #E2E8F0;border-radius:14px;padding:12px 16px;font-size:13px;';
-      indicator.innerHTML = '<em>Maradar is analyzing live streams...</em>';
-      chatMessages.appendChild(indicator);
-      chatContainer.scrollTop = chatContainer.scrollHeight;
-
-      setTimeout(() => {
-        const ind = document.getElementById('typingIndicator');
-        if (ind) ind.remove();
-        appendMessage(mockResponses[key], false);
-      }, 600);
-    }
-
-    chatForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const text = chatInput.value.trim();
-      if (!text) return;
-      appendMessage(text, true);
-      chatInput.value = '';
-      handleBotReply(text);
-    });
-
-    pillBtns.forEach(pill => {
-      pill.addEventListener('click', () => {
-        const query = pill.getAttribute('data-query');
-        appendMessage(query, true);
-        handleBotReply(query);
-      });
-    });
-
-    resetChatBtn.addEventListener('click', () => {
-      chatMessages.innerHTML = '';
-      welcomeScreen.style.display = 'flex';
-      chatInput.value = '';
-    });
-  });
-</script>
-    </div>
-      <section>
         
 <!-- WHY MARADAR — Interactive Diagonal Panels -->
 <section class="section why-maradar-section" style="background:linear-gradient(180deg,#EEF3FF 0%,#F5F8FF 100%);">
