@@ -443,9 +443,7 @@
       min-width:170px; max-width:200px; z-index:10;
       animation: badgeFloat 3s ease-in-out infinite;
     }
-    .alert-badge:nth-child(2) { animation-delay:0.8s; }
-    .alert-badge:nth-child(3) { animation-delay:1.6s; }
-    .alert-badge:nth-child(4) { animation-delay:2.4s; }
+    .alert-badge:nth-child(2) { animation-delay:1.6s; }
     .ab-action { font-size:10px; font-weight:700; color:var(--blue); white-space:nowrap; border:1px solid var(--blue); border-radius:var(--r-full); padding:2px 8px; text-decoration:none; }
     @keyframes badgeFloat {
       0%,100% { transform:translateY(0); }
@@ -459,8 +457,6 @@
     
     /* Badge positions — inset so they don't get clipped */
     .ab-tl { top:-20px; left:-16px; }
-    .ab-tr { top:-20px; right:-16px; }
-    .ab-bl { bottom:-20px; left:-16px; }
     .ab-br { bottom:-20px; right:-16px; }
     @media (max-width:900px) {
       /* Hide old inline mobile alerts */
@@ -1833,9 +1829,6 @@
         </div>
         <div class="dashboard-frame">
           <div class="alert-badge ab-blue ab-tl"><div class="ab-icon">⚡</div><div><div class="ab-title">ROAS spike detected</div><div class="ab-sub">AU campaign · +34% this week</div></div></div>
-          <div class="alert-badge ab-amber ab-tr" style="flex-direction:column;gap:6px;min-width:190px;"><div style="display:flex;align-items:flex-start;gap:9px;"><div class="ab-icon">👁</div><div><div class="ab-title">
-            Competitor alert</div><div class="ab-sub">6 new ads launched in SG</div></div></div><a class="ab-action">☆ Investigate</a></div>
-          <div class="alert-badge ab-red ab-bl"><div class="ab-icon">⚠</div><div><div class="ab-title">Creative fatigue</div><div class="ab-sub">3 ads nearing saturation</div></div></div>
           <div class="alert-badge ab-green ab-br"><div class="ab-icon">📊</div><div><div class="ab-title">Competitor activity</div><div class="ab-sub">HK competitor volume +28%</div></div></div>
           <div class="chart-card">
             <div class="chart-header"><span class="chart-title">ROAS by platform — 30-day trend · illustrative</span></div>
