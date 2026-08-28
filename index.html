@@ -518,6 +518,7 @@
     .workflow-section .dot-amber { background-color: #F59E0B; }
     .workflow-section .dot-blue { background-color: #3B82F6; }
     .workflow-section .dot-green { background-color: #10B981; }
+    
     /* Responsive Rules */
     @media (max-width: 900px) {
     .workflow-section .workflow-step, 
@@ -535,11 +536,11 @@
     /* Grid Layout */
     .feature-row { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
     .feature-row.reverse { flex-direction: row-reverse; }
-    .feature-col-text { flex: 1 0 480px; max-width: 480px; } /* Updated: Prevent flex shrinking */
-    .feature-col-visual { flex: 1 0 520px; max-width: 520px; } /* Updated: Prevent flex shrinking */
+    .feature-col-text { flex: 1 0 480px; max-width: 480px; }
+    .feature-col-visual { flex: 1 0 520px; max-width: 520px; }
 
     /* Text Content */
-    .feature-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #64748B; margin-bottom: 12px; } /* Updated: Darker color for contrast */
+    .feature-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #64748B; margin-bottom: 12px; }
     .feature-title { font-size: 38px; font-weight: 700; line-height: 1.2; color: #0F172A; margin-bottom: 16px; letter-spacing: -0.02em; }
     .feature-desc { font-size: 15px; line-height: 1.6; color: #64748B; margin-bottom: 24px; }
 
@@ -562,40 +563,53 @@
     .dot-blue { background-color: #3B82F6; }
     .dot-green { background-color: #10B981; }
 
-    /* Responsive */
+    /* Feature Responsive Overrides */
     @media (max-width: 900px) {
-      .feature-row, .feature-row.reverse { flex-direction: column; gap: 40px; text-align: left; }
-      .feature-col-text, .feature-col-visual { max-width: 100%; width: 100%; flex: 1 1 auto; }
-      .feature-title { font-size: 30px; }
+    .feature-row, 
+    .feature-row.reverse { flex-direction: column !important; gap: 40px !important; text-align: left; }
+    .feature-col-text, 
+    .feature-col-visual { max-width: 100% !important; width: 100% !important; flex: 1 1 auto !important; }
+    .feature-title { font-size: 30px !important; }
+    .feature-desc { font-size: 16px !important; font-weight: 400 !important; }
     }
-    /* Split sections */
-    .split-section { padding:96px 0; }
-    .split-alt { background:var(--off-white); }
-    .split-inner { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
-    @media (max-width:900px) { .split-inner { grid-template-columns:1fr; gap:48px; } }
-    .split-img { border-radius:var(--r-xl); overflow:hidden; box-shadow:var(--shadow-lg); }
-    .split-img img { width:100%; display:block; }
-    .split-content .eyebrow { display:block; margin-bottom:14px; }
-    .split-title {
-      font-family:var(--font-display); font-style:normal; font-weight:700;
-      font-size:clamp(24px, 3vw, 34px); line-height:1.2; letter-spacing:-0.01em;
-      color:var(--ink); margin-bottom:16px;
-    }
-    .split-body { font-size:15px; line-height:1.7; color:var(--grey-600); margin-bottom:28px; }
-    .split-actions { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
 
-     /* Ask Maradar Section */
+    /* — Split Sections — */
+    .split-section { padding: 96px 0; }
+    .split-alt { background: var(--off-white); }
+    .split-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+
+    @media (max-width: 900px) { 
+    .split-inner { grid-template-columns: 1fr !important; gap: 48px !important; } 
+    }
+
+    .split-img { border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .split-img img { width: 100%; display: block; }
+    .split-content .eyebrow { display: block; margin-bottom: 14px; }
+    .split-title {font-family: var(--font-display); font-style: normal; font-weight: 700;
+      font-size: clamp(24px, 3vw, 34px); line-height: 1.2; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 16px;
+    }
+    .split-body { font-size: 15px; line-height: 1.7; color: var(--grey-600); margin-bottom: 28px; }
+    .split-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+    /* Ask Maradar Section (Desktop Defaults) */
     .ask-maradar-section { padding: 90px 20px; background-color: #000000; text-align: left; }
-    .ask-maradar-content { max-width: 480px; margin: 0; }
+
+    /* Added: Base desktop grid/flex container */
+    .ask-maradar-container {display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto;}
+    .ask-maradar-content {flex: 1 0 480px; max-width: 480px;}
+
+    /* Added: Base visual card width constraints */
+    .ask-maradar-visual { flex: 1 0 520px; max-width: 520px; width: 100%;}
     .ask-maradar-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #94A3B8; margin-bottom: 12px; }
     .ask-maradar-title { font-size: 38px; font-weight: 700; line-height: 1.2; color: #FFFFFF; margin-bottom: 16px; letter-spacing: -0.02em; }
     .ask-maradar-desc { font-size: 15px; line-height: 1.6; font-weight: 400; color: #94A3B8; margin-bottom: 24px; }
-    
+
+    /* Mobile Responsive Overrides */
     @media (max-width: 900px) {
-    .ask-maradar-container {flex-direction: column; gap: 40px; }
+    .ask-maradar-container {flex-direction: column !important; gap: 40px !important;}
     .ask-maradar-content,
-    .ask-maradar-visual { max-width: 100%; width: 100%; flex: 1 1 auto; }
-    .ask-maradar-title {font-size: 30px;}
+    .ask-maradar-visual {max-width: 100% !important; width: 100% !important; flex: 1 1 auto !important;}
+    .ask-maradar-title {font-size: 30px !important;}
     }
     /* CTA Banner */
     .cta-banner {padding:96px 48px; background: linear-gradient(135deg, #0A1628 0%, #0D3B8C 50%, var(--blue) 100%); text-align:center; position:relative; overflow:hidden;}
@@ -626,16 +640,16 @@
     .prog-track { height:5px; border-radius:3px; background:var(--grey-100); overflow:hidden; }
     .prog-fill { height:100%; border-radius:3px; }
     
-    /* — Product — */
-    /* Dark Hero Section - */
-    .blog-hero { padding: 120px 0 80px; text-align: center; background: radial-gradient(120% 100% at 50% 0%, #0F172A 0%, #030712 100%); color: #FFFFFF; }
-    .blog-hero .eyebrow { color: #64748B; margin-bottom: 16px; }
+   /* — 1. Dark Hero Section — */
+    .blog-hero {padding: 120px 20px 80px; text-align: center; background: radial-gradient(120% 100% at 50% 0%, #0F172A 0%, #030712 100%); color: #FFFFFF; }
+    .blog-hero .eyebrow { color: #64748B; margin-bottom: 16px; display: block; }
     .blog-hero h1 { font-size: 52px; font-weight: 800; line-height: 1.15; color: #FFFFFF; max-width: 820px; margin: 0 auto 32px; letter-spacing: -0.03em; }
-    .blog-hero .btn-hero-white { background-color: #FFFFFF; color: #0F172A; border-radius: 99px; padding: 12px 28px; font-size: 15px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s ease; }
+    .blog-hero .btn-hero-white { background-color: #FFFFFF; color: #0F172A; border-radius: 99px; padding: 12px 28px; font-size: 15px; font-weight: 700; text-decoration: none; 
+  display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s ease; }
     .blog-hero .btn-hero-white:hover { background-color: #F1F5F9; }
 
-    /* Cards Grid & Metrics */
-    .intelligence-section { padding: 80px 0; background-color: #F8FAFC; }
+    /* — 2. Intelligence Section & Metric Grids — */
+    .intelligence-section { padding: 80px 20px; background-color: #F8FAFC; }
     .dash-cards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
     .dash-card { background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 20px; padding: 32px; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02); }
     .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
@@ -664,8 +678,8 @@
     .fill-amber { background-color: #F59E0B; }
     .fill-purple { background-color: #8B5CF6; }
 
-    /* Workspace & Signals Section */
-    .workspace-section { padding: 80px 0; background-color: #F3F5F8; }
+    /* — 3. Workspace & Signals Section — */
+    .workspace-section { padding: 80px 20px; background-color: #F3F5F8; }
     .workspace-header { text-align: center; max-width: 680px; margin: 0 auto 48px; }
     .workspace-header h2 { font-size: 40px; line-height: 1.2; color: #0F172A; margin-bottom: 16px; font-weight: 700; }
     .workspace-header p { font-size: 16px; color: #64748B; line-height: 1.6; }
@@ -685,24 +699,23 @@
     .theme-creative .badge-tag, .theme-creative .action-pill { background-color: #DBEAFE; color: #2563EB; }
     .theme-market .badge-tag, .theme-market .action-pill { background-color: #D1FAE5; color: #10B981; }
     .theme-competitor .badge-tag, .theme-competitor .action-pill { background-color: #FEF3C7; color: #D97706; }
-    .subtag-list { display: flex; gap: 6px; margin-top: 4px; }
+    .subtag-list { display: flex; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
     .subtag-item { font-size: 12px; font-weight: 600; color: #64748B; background-color: #F1F5F9; padding: 3px 10px; border-radius: 99px; }
 
-    /* Feature Rows & Briefing */
-    .feature-section { padding: 90px 0; }
+    /* — 4. Feature Rows & Split Layouts — */
+    .feature-section { padding: 90px 20px; }
     .bg-white { background-color: #FFFFFF; }
     .bg-alt { background-color: #F4F6F9; }
     .feature-row { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
     .feature-row.reverse { flex-direction: row-reverse; }
-    .feature-col-text { flex: 1; max-width: 480px; }
-    .feature-col-visual { flex: 1; max-width: 520px; }
+    .feature-col-text { flex: 1 0 480px; max-width: 480px; }
+    .feature-col-visual { flex: 1 0 520px; max-width: 520px; width: 100%; }
 
-    /* Split Section Alternating Layout Mapping */
-    .split-section { padding: 90px 0; }
+    .split-section { padding: 90px 20px; }
     .split-inner { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
     .split-section.split-alt .split-inner { flex-direction: row-reverse; }
-    .split-content { flex: 1; max-width: 480px; }
-    .split-img { flex: 1; max-width: 520px; }
+    .split-content { flex: 1 0 480px; max-width: 480px; }
+    .split-img { flex: 1 0 520px; max-width: 520px; width: 100%; }
 
     .feature-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #94A3B8; margin-bottom: 12px; }
     .feature-title { font-size: 38px; font-weight: 700; line-height: 1.2; color: #0F172A; margin-bottom: 16px; letter-spacing: -0.02em; }
@@ -721,41 +734,42 @@
     .feature-cta-group { display: flex; align-items: center; gap: 16px; margin-top: 24px; flex-wrap: wrap; }
     .btn-link { font-size: 14px; font-weight: 600; color: #2563EB; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
     .btn-link:hover { text-decoration: underline; }
-    
-    @media (max-width: 900px) {
-    .feature-row,
-    .feature-row.reverse {flex-direction: column; gap: 40px; text-align: left; }
-    .feature-col-text,
-    .feature-col-visual {max-width: 100%; width: 100%; flex: 1 1 auto; }
-    .feature-title {font-size: 30px; }
-    }
-    
-   /* Ask Maradar Section (Desktop & Core Defaults) */
+
+    /* — 5. Ask Maradar Section (Desktop Defaults) — */
     .ask-maradar-section { padding: 90px 20px; background-color: #000000; text-align: left; }
-    .ask-maradar-content { max-width: 480px; margin: 0; }
+    .ask-maradar-container { display: flex; align-items: center; justify-content: space-between; gap: 64px; max-width: 1100px; margin: 0 auto; }
+    .ask-maradar-content { flex: 1 0 480px; max-width: 480px; }
+    .ask-maradar-visual { flex: 1 0 520px; max-width: 520px; width: 100%; }
     .ask-maradar-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #94A3B8; margin-bottom: 12px; }
     .ask-maradar-title { font-size: 38px; font-weight: 700; line-height: 1.2; color: #FFFFFF; margin-bottom: 16px; letter-spacing: -0.02em; }
     .ask-maradar-desc { font-size: 15px; line-height: 1.6; font-weight: 400; color: #94A3B8; margin-bottom: 24px; }
 
+    /* — 6. Global Responsive Overrides (Mobile / Tablet <= 900px) — */
     @media (max-width: 900px) {
-    .ask-maradar-container {flex-direction: column; gap: 40px; }
-    .ask-maradar-content,
-    .ask-maradar-visual {max-width: 100%; width: 100%; flex: 1 1 auto;}
-    .ask-maradar-title {font-size: 30px; }
-    }
-     /* Forces content and visual card to stack vertically */
-    .ask-maradar-section > div,
-    .ask-maradar-wrapper,
-    .ask-maradar-container { display: flex !important; flex-direction: column !important; gap: 32px !important; width: 100% !important; max-width: 100% !important;}
-    .ask-maradar-content { max-width: 100% !important; width: 100% !important;}
+    .blog-hero h1 { font-size: 34px !important; }
+  
+    .dash-cards-grid { grid-template-columns: 1fr !important; }
+  
+    .signal-row { flex-direction: column !important; gap: 12px !important; }
+    .action-pill { align-self: flex-start !important; }
 
-    /* Scales title down appropriately for small screens */
-    .ask-maradar-title { font-size: 32px !important; line-height: 1.15; margin-bottom: 14px; }
-    .ask-maradar-desc { font-size: 15px !important; line-height: 1.5; margin-bottom: 20px; }
-    .ask-maradar-section img,
-    .ask-maradar-section .card,
-    .ask-maradar-section [class*="card"] { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
-}
+    .feature-row,
+    .feature-row.reverse,
+    .split-inner,
+    .split-section.split-alt .split-inner,
+    .ask-maradar-container { flex-direction: column !important; gap: 40px !important; text-align: left !important; }
+
+    .feature-col-text,
+    .feature-col-visual,
+    .split-content,
+    .split-img,
+    .ask-maradar-content,
+    .ask-maradar-visual { max-width: 100% !important; width: 100% !important; flex: 1 1 auto !important; }
+
+    .feature-title,
+    .ask-maradar-title,
+    .workspace-header h2 { font-size: 30px !important; }
+    }
     /* ── Pricing ── */
     /* Dark Hero Section - */
     .blog-hero { padding: 120px 0 80px; text-align: center; background: radial-gradient(120% 100% at 50% 0%, #0F172A 0%, #030712 100%); color: #FFFFFF; }
