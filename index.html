@@ -1307,36 +1307,29 @@
 .why-panel.active { flex: 7 0 0; z-index: 10; }
 .why-panel-accent { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: rgba(255,255,255,0.22); z-index: 2; }
 .why-panel-progress { position: absolute; top: 0; left: 0; right: 0; height: 2px; z-index: 3; pointer-events: none; }
-.why-panel-progress-fill { height: 100%; width: 0%; background: var(--white); }
+.why-panel-progress-fill { height: 100%; width: 0%; background: #FFFFFF; }
 .why-panel-sliver { position: absolute; top: 0; left: 0; bottom: 0; right: 0; display: flex; align-items: center; justify-content: center; transition: opacity 0.25s ease; }
 .why-panel.active .why-panel-sliver { opacity: 0; pointer-events: none; }
-.why-panel-sliver-num { font-family: var(--font-display); font-size: 15px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); user-select: none; }
-.why-panel-sliver-label { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); margin-top: 10px; user-select: 
-    none; }
-.why-panel-content { position: absolute; top: 0; bottom: 0; left: 0; width: 40vw; padding: 0 64px; display: flex; flex-direction: column; justify-content: center; opacity: 0; transform: translateY(18px); transition: opacity 0s, transform 0s; pointer-events: none; }
+.why-panel-sliver-num { font-size: 15px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); user-select: none; }
+.why-panel-sliver-label { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); margin-top: 10px; user-select: none; }
+.why-panel-content { position: absolute; top: 0; bottom: 0; left: 0; width: 100%; max-width: 540px; padding: 0 48px; display: flex; flex-direction: column; justify-content: center; opacity: 0; transform: translateY(18px); transition: opacity 0s, transform 0s; pointer-events: none; box-sizing: border-box; }
 .why-panel.active .why-panel-content { opacity: 1; transform: translateY(0); transition: opacity 0.4s 0.28s ease, transform 0.4s 0.28s ease; pointer-events: auto; }
 .why-panel-eyebrow { font-size: 15px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 22px; }
-.why-panel-title { font-family: var(--font-display); font-size: clamp(32px, 3.2vw, 46px); font-weight: 800; color: var(--white); line-height: 1.18; margin: 0 0 22px; }
-.why-panel-body { font-size: 20px; font-weight: 400; line-height: 1.65; color: rgba(255,255,255,0.72); margin: 0; }
+.why-panel-title { font-size: clamp(24px, 3.2vw, 46px); font-weight: 800; color: #FFFFFF; line-height: 1.18; margin: 0 0 22px; }
+.why-panel-body { font-size: clamp(14px, 1.5vw, 20px); font-weight: 400; line-height: 1.65; color: rgba(255,255,255,0.72); margin: 0; }
 .why-dots { display: flex; justify-content: center; gap: 8px; padding: 24px 0 0; }
-.why-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(10,35,102,0.18); cursor: pointer; transition: background 0.25s, transform 0.25s; border: none; padding: 0; }
-.why-dot.active { background: var(--blue); transform: scale(1.4); }
+.why-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(10,35,102,0.18); cursor: pointer; transition: background 0.25s, transform 0.25s; border: none; padding: 0; }
+.why-dot.active { background: #2563EB; transform: scale(1.4); }
 
+/* Responsive Adjustments Preserving Horizontal Accordion Design */
 @media (max-width: 780px) {
-  .why-banners { flex-direction: column; height: auto; margin-top: 32px; }
-  .why-panel { flex: none !important; clip-path: none !important; margin-right: 0 !important; border-bottom: 1px solid rgba(255,255,255,0.07); z-index: 1 !important; overflow: visible !important; transition: none; }
-  .why-panel-sliver { height: 60px; justify-content: flex-start; padding-left: 20px; opacity: 1 !important; pointer-events: auto !important; }
-  .why-panel.active .why-panel-sliver { display: none !important; }
-  .why-panel-sliver-num { writing-mode: horizontal-tb; transform: none; font-size: 13px; }
-  .why-panel-sliver-label { writing-mode: horizontal-tb; transform: none; margin-top: 0; margin-left: 10px; font-size: 11px; }
-  .why-panel-content { position: relative !important; top: auto !important; bottom: auto !important; left: auto !important; width: 100% !important; padding: 28px 24px 40px !important; opacity: 0 !important; transform: none !important; transition: opacity 0.3s ease !important; 
-                      pointer-events: none !important; justify-content: flex-start !important; display: none !important; }
-  .why-panel.active .why-panel-content { display: flex !important; opacity: 1 !important; pointer-events: auto !important; }
-  .why-panel-eyebrow { font-size: 12px !important; margin-bottom: 12px !important; }
-  .why-panel-title { font-size: clamp(22px, 5.5vw, 28px) !important; line-height: 1.2 !important; margin-bottom: 14px !important; }
-  .why-panel-body { font-size: 15px !important; line-height: 1.65 !important; }
-  .why-dots { padding: 16px 0 0; }
+  .why-banners { height: 440px; margin-top: 24px; min-width: 600px; }
+  .why-maradar-section { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .why-panel-content { padding: 0 28px; }
+  .why-panel-title { margin-bottom: 12px; }
+  .why-panel-eyebrow { margin-bottom: 12px; font-size: 12px; }
 }
+                                                                                                                                                                                                      
 /* ═══════════════════════════════════════════════════════════════
    MOBILE RESPONSIVE FIXES
    ═══════════════════════════════════════════════════════════════ */
@@ -2090,6 +2083,37 @@ body.nav-open { overflow: hidden; }
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const bannersContainer = document.getElementById('whyBanners');
+    if (!bannersContainer) return;
+
+    const panels = bannersContainer.querySelectorAll('.why-panel');
+    let activeIndex = 0;
+
+    function setActivePanel(index) {
+      panels.forEach((panel, i) => {
+        panel.classList.toggle('active', i === index);
+      });
+      activeIndex = index;
+    }
+
+    // Attach click listener to each panel
+    panels.forEach((panel, index) => {
+      panel.addEventListener('click', () => {
+        // If clicking the active panel, cycle to the next card
+        if (index === activeIndex) {
+          const nextIndex = (activeIndex + 1) % panels.length;
+          setActivePanel(nextIndex);
+        } else {
+          // If clicking an inactive panel, open it
+          setActivePanel(index);
+        }
+      });
+    });
+  });
+</script>
 
 <!-- CTA BANNER 1 -->
 <div class="cta-banner">
