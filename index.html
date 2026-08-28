@@ -727,27 +727,31 @@
     .btn-link { font-size: 14px; font-weight: 600; color: #2563EB; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
     .btn-link:hover { text-decoration: underline; }
     
-    /* Ask Maradar Section */
+   /* Ask Maradar Section (Desktop & Core Defaults) */
     .ask-maradar-section { padding: 90px 20px; background-color: #000000; text-align: left; }
     .ask-maradar-content { max-width: 480px; margin: 0; }
     .ask-maradar-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #94A3B8; margin-bottom: 12px; }
     .ask-maradar-title { font-size: 38px; font-weight: 700; line-height: 1.2; color: #FFFFFF; margin-bottom: 16px; letter-spacing: -0.02em; }
     .ask-maradar-desc { font-size: 15px; line-height: 1.6; font-weight: 400; color: #94A3B8; margin-bottom: 24px; }
-      
-    /* Responsive Rules */
-    @media (max-width: 900px) {
-    .dash-cards-grid { grid-template-columns: 1fr; }
-    .section-header h2, .workspace-header h2 { font-size: 32px; }
-    .feature-row, .feature-row.reverse { flex-direction: column; gap: 40px; text-align: left; }
-    .feature-col-text, .feature-col-visual { max-width: 100%; width: 100%; }
-     .feature-title { font-size: 30px; }
-    }
+
+    /* Mobile Responsive Overrides */
     @media (max-width: 768px) {
-      .signal-row { flex-direction: column; align-items: flex-start; }
-      .ask-maradar-section { padding: 70px 20px; }
-      .ask-maradar-title { font-size: 44px; }
-      .ask-maradar-desc { font-size: 16px; }
-    }
+    .signal-row { flex-direction: column; align-items: flex-start; }
+    .ask-maradar-section { padding: 60px 20px; }
+  
+    /* Forces content and visual card to stack vertically */
+    .ask-maradar-section > div, 
+    .ask-maradar-wrapper,
+    .ask-maradar-container {display: flex !important; flex-direction: column !important; gap: 32px !important; width: 100% !important; max-width: 100% !important;}
+    .ask-maradar-content { max-width: 100% !important; width: 100% !important;}
+
+  /* Scales title down appropriately for small screens */
+  .ask-maradar-title {font-size: 32px !important; line-height: 1.15; margin-bottom: 14px;}
+  .ask-maradar-desc {font-size: 15px; line-height: 1.5; margin-bottom: 20px;}
+  .ask-maradar-section img,
+  .ask-maradar-section .card,
+  .ask-maradar-section [class*="card"] {width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;}
+}
     
     /* ── Pricing ── */
     /* Dark Hero Section - */
